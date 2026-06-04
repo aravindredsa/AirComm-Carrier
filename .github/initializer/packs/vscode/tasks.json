@@ -1,0 +1,66 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "initializer: sync manifest metadata",
+			"type": "shell",
+			"command": "node .github/initializer/tools/sync-seed-manifest.js",
+			"problemMatcher": []
+		},
+		{
+			"label": "onboard new client",
+			"type": "shell",
+			"command": "node .github/initializer/tools/onboard-new-client.js --input .github/initializer/client-inputs/client-onboarding-response-template.md --sync-manifest",
+			"problemMatcher": []
+		},
+		{
+			"label": "update client profile",
+			"type": "shell",
+			"command": "node .github/initializer/tools/update-client-profile.js --input .github/initializer/client-inputs/client-onboarding-response-template.md --client-id xome --sync-manifest",
+			"problemMatcher": []
+		},
+		{
+			"label": "initializer: watch owner loop",
+			"type": "shell",
+			"command": "node .github/initializer/tools/watch-owner-loop.js",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "initializer: finalize distribution zip (auto)",
+			"type": "shell",
+			"command": "node .github/initializer/tools/finalize-distribution.js --release=auto",
+			"problemMatcher": []
+		},
+		{
+			"label": "initializer: finalize distribution zip (patch)",
+			"type": "shell",
+			"command": "node .github/initializer/tools/finalize-distribution.js --release=patch --no-release-check",
+			"problemMatcher": []
+		},
+		{
+			"label": "initializer: finalize distribution zip (minor)",
+			"type": "shell",
+			"command": "node .github/initializer/tools/finalize-distribution.js --release=minor --no-release-check",
+			"problemMatcher": []
+		},
+		{
+			"label": "initializer: finalize distribution zip (major)",
+			"type": "shell",
+			"command": "node .github/initializer/tools/finalize-distribution.js --release=major --no-release-check",
+			"problemMatcher": []
+		},
+		{
+			"label": "initializer: finalize distribution zip (prune deleted)",
+			"type": "shell",
+			"command": "node .github/initializer/tools/finalize-distribution.js --release=patch --prune-deleted",
+			"problemMatcher": []
+		},
+		{
+			"label": "initializer: sync owner from zip",
+			"type": "shell",
+			"command": "node .github/initializer/tools/sync-owner-from-zip.js",
+			"problemMatcher": []
+		}
+	]
+}

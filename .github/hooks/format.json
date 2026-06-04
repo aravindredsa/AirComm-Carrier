@@ -1,0 +1,11 @@
+﻿{
+  "hooks": {
+    "postToolUse": [
+      {
+        "type": "shell",
+        "command": "node .github/hooks/run-post-tool-checks.cjs",
+        "description": "Run guarded post-tool checks by detected tech stack"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+clientId: aircomm-carrier
+displayName: AirComm Carrier
+description: Single-client distribution profile for AirComm Carrier.
+default: true
+intendedUse:
+  - feature-implementation
+  - testing
+  - documentation
+enabledCapabilities:
+  language:
+    - java
+    - typescript
+  framework:
+    - react
+    - spring-boot
+  testing:
+    - junit
+    - vitest
+    - playwright
+  data:
+    - relational-schema
+    - data-contracts
+  platform:
+    - aws
+    - gcp
+  architecture:
+    - api
+    - workers
+    - modular-boundaries
+overlayRoot: docs/standards/clients/aircomm-carrier/overlays
+rules:
+  - always include test evidence
+  - always include assumptions
+  - mask personal identifiers
+  - no production data in examples
+  - Avoid: do not run destructive database operations without explicit approval
+  - Require approvals: product owner approval and QA approval
+examples:
+  preferredOutputStyle: "very detailed"
+  clientSpecificTerminology:
+    - use claimant instead of user

@@ -1,0 +1,40 @@
+{
+  "seedPolicy": {
+    "defaultMode": "overwrite",
+    "packagedArtifactsBehavior": "report-only",
+    "preserveMeaningfulCopilotInstructions": true
+  },
+  "inventoryPolicy": {
+    "primarySource": ".github/initializer/manifest/seed-manifest.json",
+    "sourceModel": "manifest-driven"
+  },
+  "validationPolicy": {
+    "enforceManifestValidatorChecks": true,
+    "failOnManifestIntegrityError": true,
+    "onManifestIntegrityError": "fail-and-report",
+    "requireTargetChecksumsForSeededFiles": true,
+    "requireTargetSourcePathsForSeededFiles": true
+  },
+  "migrationPolicy": {
+    "modeConfigPath": ".github/initializer/migrations/migration-mode.json",
+    "defaultMode": "auto",
+    "supportedModes": [
+      "auto",
+      "bootstrap",
+      "migrate",
+      "reseed",
+      "audit"
+    ],
+    "stateFile": ".init_state/initializer-version.json",
+    "writeStateInModes": [
+      "bootstrap",
+      "migrate",
+      "reseed"
+    ],
+    "preserveStateOnCleanup": true,
+    "allowForceReseed": true,
+    "stateSchemaVersion": "2.0",
+    "deltaComparisonKey": "checksumSha256",
+    "repairMissingRequiredTargets": true
+  }
+}

@@ -1,0 +1,7 @@
+# Owner sync incoming artifacts
+.owner-sync-incoming/*
+!.owner-sync-incoming/README.md
+
+# OS metadata
+.DS_Store
+Thumbs.db

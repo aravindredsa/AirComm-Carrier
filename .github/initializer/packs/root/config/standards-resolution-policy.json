@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "mode": "client-plus-capability",
+  "defaultClientId": "aircomm-carrier",
+  "resolutionOrder": [
+    "common",
+    "domain",
+    "capability",
+    "client-overlay"
+  ],
+  "rules": {
+    "selection": {
+      "promptIntent": "Determine the workflow domain first, then select matching domain standards.",
+      "capabilities": "Match detected technology and output artifacts to capability standards.",
+      "client": "Select the explicit client profile when provided. If no client is provided, use the default profile only for workflows that explicitly target that client.",
+      "fallback": "If no capability match exists, continue with common + domain (+ client overlay only when explicitly selected and available)."
+    },
+    "conflictHandling": {
+      "commonSafetyRules": "Never downgrade security, privacy, or evidence requirements from common standards.",
+      "specificity": "More specific applicable layers override broader layers for non-safety rules.",
+      "narrowing": "Client overlays may narrow requirements but should not duplicate universal rules unless necessary for clarity."
+    },
+    "traceability": {
+      "required": true,
+      "includeSelectedFiles": true,
+      "includeReasoning": true,
+      "includeConflictNotes": true
+    },
+    "clientOnboarding": {
+      "defaultProfile": "aircomm-carrier",
+      "overlayOptional": true,
+      "newClientRequires": [
+        "client id",
+        "project name",
+        "languages used",
+        "frameworks used",
+        "testing tools used",
+        "database or data storage used",
+        "host/deployment platform",
+        "output types needed",
+        "format preferences",
+        "client rules or guardrails",
+        "security/privacy requirements",
+        "approval requirements",
+        "tools or actions to avoid",
+        "whether client-specific overlay is required at onboarding time"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2409 @@
+{
+  "manifestVersion": "6.0",
+  "packVersion": "v6",
+  "stage": "6",
+  "description": "Initializer required inventory and policy metadata",
+  "managedRoot": ".",
+  "requiredFolders": [
+    ".githooks",
+    ".github",
+    ".github/hooks",
+    ".github/initializer",
+    ".github/initializer/client-inputs",
+    ".github/initializer/owner-guides",
+    ".github/initializer/owner-guides/hooks",
+    ".github/initializer/owner-guides/policies",
+    ".github/initializer/owner-guides/prompts",
+    ".github/initializer/owner-guides/standards",
+    ".github/initializer/owner-guides/tools",
+    ".github/initializer/owner-prompts",
+    ".github/initializer/tools",
+    ".github/prompts",
+    ".github/skills",
+    ".github/skills/skill-ba-analysis",
+    ".github/skills/skill-ba-reverse-engineer-application",
+    ".github/skills/skill-ba-user-story-writing",
+    ".github/skills/skill-backend-ba-analysis",
+    ".github/skills/skill-backend-generate-tests",
+    ".github/skills/skill-bpmn-brd-analyzer",
+    ".github/skills/skill-bpmn-flow-deriver",
+    ".github/skills/skill-bpmn-generate",
+    ".github/skills/skill-bpmn-review",
+    ".github/skills/skill-bpmn-workflow-generation",
+    ".github/skills/skill-codebase-audit",
+    ".github/skills/skill-db-audit-and-quality",
+    ".github/skills/skill-db-change-management",
+    ".github/skills/skill-db-schema-design",
+    ".github/skills/skill-db-seed-and-deployment",
+    ".github/skills/skill-db-stored-procedures",
+    ".github/skills/skill-feature-implementation",
+    ".github/skills/skill-frontend-generate-tests",
+    ".github/skills/skill-qa-automation-scripts",
+    ".github/skills/skill-qa-bug-report",
+    ".github/skills/skill-qa-failure-triage-fix",
+    ".github/skills/skill-qa-test-case-design",
+    ".github/skills/skill-qa-test-case-update",
+    ".init_state",
+    ".owner-sync-incoming",
+    ".vscode",
+    "agents",
+    "artifacts",
+    "artifacts/docx",
+    "artifacts/feature-plans",
+    "artifacts/functional-requirements",
+    "artifacts/gap-analysis",
+    "artifacts/lld",
+    "artifacts/reverse-engineer-analysis",
+    "artifacts/ui-analysis",
+    "artifacts/user-stories",
+    "config",
+    "docs",
+    "docs/architecture",
+    "docs/onboarding",
+    "docs/playbooks",
+    "docs/playbooks/ba",
+    "docs/playbooks/backend",
+    "docs/playbooks/bpmn",
+    "docs/playbooks/db",
+    "docs/playbooks/frontend",
+    "docs/playbooks/qa",
+    "docs/references",
+    "docs/standards",
+    "docs/standards/capabilities",
+    "docs/standards/capabilities/architecture",
+    "docs/standards/capabilities/database",
+    "docs/standards/capabilities/framework",
+    "docs/standards/capabilities/language",
+    "docs/standards/capabilities/platform",
+    "docs/standards/capabilities/testing",
+    "docs/standards/clients",
+    "docs/standards/clients/aircomm-carrier",
+    "docs/standards/clients/aircomm-carrier/overlays",
+    "docs/standards/common",
+    "docs/standards/domains",
+    "docs/standards/domains/ba",
+    "docs/standards/domains/bpmn",
+    "docs/standards/domains/db",
+    "docs/standards/domains/qa",
+    "reports",
+    "reports/audits",
+    "reports/audits/full-codebase",
+    "reports/audits/uncommitted-changes",
+    "reports/evaluations",
+    "reports/test-coverage",
+    "reports/test-execution",
+    "templates",
+    "templates/ba",
+    "templates/backend",
+    "templates/bpmn",
+    "templates/db",
+    "templates/frontend",
+    "templates/qa"
+  ],
+  "requiredFiles": [
+    ".githooks/pre-push",
+    ".github/copilot-instructions.md",
+    ".github/copilot-instructions.md",
+    ".github/hooks/detect-stack.cjs",
+    ".github/hooks/format.json",
+    ".github/hooks/pre-push-audit-gate.config.json",
+    ".github/hooks/pre-push-audit-gate.js",
+    ".github/hooks/README.md",
+    ".github/hooks/run-post-tool-checks.cjs",
+    ".github/initializer/client-inputs/client-onboarding-questionnaire.md",
+    ".github/initializer/client-inputs/client-onboarding-response-template.md",
+    ".github/initializer/owner-guides/hooks/hooks-guide.md",
+    ".github/initializer/owner-guides/policies/audit-stack-routing-policy-guide.md",
+    ".github/initializer/owner-guides/prompts/onboard-new-client-prompt-guide.md",
+    ".github/initializer/owner-guides/prompts/update-client-profile-prompt-guide.md",
+    ".github/initializer/owner-guides/standards/standards-resolution-user-guide.md",
+    ".github/initializer/owner-guides/tools/onboard-new-client-guide.md",
+    ".github/initializer/owner-guides/tools/update-client-profile-guide.md",
+    ".github/initializer/owner-prompts/onboard-new-client.prompt.md",
+    ".github/initializer/owner-prompts/update-client-profile.prompt.md",
+    ".github/initializer/tools/finalize-distribution.js",
+    ".github/initializer/tools/generate-prompt-adoption-report.js",
+    ".github/initializer/tools/initialize-workspace.js",
+    ".github/initializer/tools/log-prompt-usage.js",
+    ".github/initializer/tools/onboard-new-client.js",
+    ".github/initializer/tools/sync-owner-from-zip.js",
+    ".github/initializer/tools/sync-seed-manifest.js",
+    ".github/initializer/tools/update-client-profile.js",
+    ".github/initializer/tools/watch-owner-loop.js",
+    ".github/prompts/audit-fullcodebase.prompt.md",
+    ".github/prompts/audit-uncommitted-changes.prompt.md",
+    ".github/prompts/ba-evaluate-reverse-engineer-document.prompt.md",
+    ".github/prompts/ba-generate-functional-requirements.prompt.md",
+    ".github/prompts/ba-generate-gap-analysis.prompt.md",
+    ".github/prompts/ba-generate-lld-from-frd-or-feature.prompt.md",
+    ".github/prompts/ba-generate-user-stories.prompt.md",
+    ".github/prompts/ba-refine-user-story-backend.prompt.md",
+    ".github/prompts/ba-refine-user-story-frontend.prompt.md",
+    ".github/prompts/ba-refine-user-story-qa.prompt.md",
+    ".github/prompts/ba-reverse-engineer-application.prompt.md",
+    ".github/prompts/ba-ui-analysis.prompt.md",
+    ".github/prompts/backend-build-feature-from-plan.prompt.md",
+    ".github/prompts/backend-build-feature-from-story-and-figma.prompt.md",
+    ".github/prompts/backend-generate-evaluation-matrix.prompt.md",
+    ".github/prompts/backend-generate-unit-test-cases.prompt.md",
+    ".github/prompts/backend-plan-feature-from-story-and-figma.prompt.md",
+    ".github/prompts/backend-ui-analysis.prompt.md",
+    ".github/prompts/bpmn-analyze-brd-for-bpmn.prompt.md",
+    ".github/prompts/bpmn-derive-bpmn-flow-from-analysis.prompt.md",
+    ".github/prompts/bpmn-generate-bpmn-from-brd.prompt.md",
+    ".github/prompts/bpmn-generate-bpmn-workflow-from-story.prompt.md",
+    ".github/prompts/bpmn-review-bpmn-workflow.prompt.md",
+    ".github/prompts/db-address-review-comments.prompt.md",
+    ".github/prompts/db-generate-all-artifacts.prompt.md",
+    ".github/prompts/db-generate-data-dictionary.prompt.md",
+    ".github/prompts/db-generate-er-diagram.prompt.md",
+    ".github/prompts/db-generate-gap-analysis.prompt.md",
+    ".github/prompts/db-generate-lookup-seed-scripts.prompt.md",
+    ".github/prompts/db-generate-schema-script.prompt.md",
+    ".github/prompts/db-generate-stored-procedures.prompt.md",
+    ".github/prompts/db-normalize-json-source.prompt.md",
+    ".github/prompts/db-post-deployment-preparation.prompt.md",
+    ".github/prompts/db-review-stored-procedure.prompt.md",
+    ".github/prompts/db-schema-change-impact.prompt.md",
+    ".github/prompts/evaluate-output-quality.prompt.md",
+    ".github/prompts/frontend-build-feature-from-plan.prompt.md",
+    ".github/prompts/frontend-build-feature-from-story-and-figma.prompt.md",
+    ".github/prompts/frontend-generate-component-test-cases.prompt.md",
+    ".github/prompts/frontend-generate-evaluation-matrix.prompt.md",
+    ".github/prompts/frontend-generate-unit-test-cases.prompt.md",
+    ".github/prompts/frontend-plan-feature-from-story-and-figma.prompt.md",
+    ".github/prompts/initialize-ai-workspace.prompt.md",
+    ".github/prompts/initialize-ai-workspace.prompt.md",
+    ".github/prompts/qa-bug-report.prompt.md",
+    ".github/prompts/qa-generate-automation-scripts.prompt.md",
+    ".github/prompts/qa-generate-tc-ts-from-figma.prompt.md",
+    ".github/prompts/qa-triage-and-fix-failures.prompt.md",
+    ".github/prompts/qa-update-tc-ts-figma.prompt.md",
+    ".github/prompts/README.md",
+    ".github/prompts/report-prompt-adoption.prompt.md",
+    ".github/prompts/reset-ai-workspace.prompt.md",
+    ".github/prompts/reset-ai-workspace.prompt.md",
+    ".github/skills/README.md",
+    ".github/skills/skill-ba-analysis/SKILL.md",
+    ".github/skills/skill-ba-reverse-engineer-application/SKILL.md",
+    ".github/skills/skill-ba-user-story-writing/SKILL.md",
+    ".github/skills/skill-backend-ba-analysis/SKILL.md",
+    ".github/skills/skill-backend-generate-tests/SKILL.md",
+    ".github/skills/skill-bpmn-brd-analyzer/SKILL.md",
+    ".github/skills/skill-bpmn-flow-deriver/SKILL.md",
+    ".github/skills/skill-bpmn-generate/SKILL.md",
+    ".github/skills/skill-bpmn-review/SKILL.md",
+    ".github/skills/skill-bpmn-workflow-generation/SKILL.md",
+    ".github/skills/skill-codebase-audit/SKILL.md",
+    ".github/skills/skill-db-audit-and-quality/SKILL.md",
+    ".github/skills/skill-db-change-management/SKILL.md",
+    ".github/skills/skill-db-schema-design/SKILL.md",
+    ".github/skills/skill-db-seed-and-deployment/SKILL.md",
+    ".github/skills/skill-db-stored-procedures/SKILL.md",
+    ".github/skills/skill-feature-implementation/SKILL.md",
+    ".github/skills/skill-frontend-generate-tests/SKILL.md",
+    ".github/skills/skill-qa-automation-scripts/SKILL.md",
+    ".github/skills/skill-qa-bug-report/SKILL.md",
+    ".github/skills/skill-qa-failure-triage-fix/SKILL.md",
+    ".github/skills/skill-qa-test-case-design/SKILL.md",
+    ".github/skills/skill-qa-test-case-update/SKILL.md",
+    ".gitignore",
+    ".init_state/prompt-usage.jsonl",
+    ".owner-sync-incoming/README.md",
+    ".vscode/tasks.json",
+    "agent.md",
+    "artifacts/feature-plans/FeatureImplementationPlan_auction-calendar_2026-04-20.md",
+    "config/client-profiles.json",
+    "config/model-routing-policy.json",
+    "config/prompt-execution-policy.json",
+    "config/standards-catalog.json",
+    "config/standards-resolution-policy.json",
+    "docs/architecture/agent-skill-template-interaction.md",
+    "docs/architecture/ai-framework-overview.md",
+    "docs/architecture/workflow-design.md",
+    "docs/onboarding/initializer-release-notes.md",
+    "docs/onboarding/workspace-ai-initialization-guide.md",
+    "docs/onboarding/workspace-model-routing-policy-guide.md",
+    "docs/onboarding/workspace-prompt-execution-policy-guide.md",
+    "docs/playbooks/ba/evaluate-reverse-engineer-document.md",
+    "docs/playbooks/ba/generate-functional-requirements.md",
+    "docs/playbooks/ba/generate-gap-analysis.md",
+    "docs/playbooks/ba/generate-user-stories.md",
+    "docs/playbooks/ba/refine-user-story-backend.md",
+    "docs/playbooks/ba/refine-user-story-frontend.md",
+    "docs/playbooks/ba/refine-user-story-qa.md",
+    "docs/playbooks/ba/reverse-engineer-application.md",
+    "docs/playbooks/ba/ui-analysis.md",
+    "docs/playbooks/backend/build-feature-from-plan.md",
+    "docs/playbooks/backend/build-feature-from-story-and-figma.md",
+    "docs/playbooks/backend/evaluate-output-quality.md",
+    "docs/playbooks/backend/generate-automation-tests.md",
+    "docs/playbooks/backend/generate-component-test-cases.md",
+    "docs/playbooks/backend/generate-evaluation-matrix.md",
+    "docs/playbooks/backend/generate-functional-test-cases.md",
+    "docs/playbooks/backend/generate-integration-test-cases.md",
+    "docs/playbooks/backend/generate-test-cases.md",
+    "docs/playbooks/backend/generate-unit-test-cases.md",
+    "docs/playbooks/backend/initialize-workspace.md",
+    "docs/playbooks/backend/onboarding-guide.md",
+    "docs/playbooks/backend/plan-feature-from-story-and-figma.md",
+    "docs/playbooks/backend/reset-ai-workspace.md",
+    "docs/playbooks/backend/reverse-engineer-application.md",
+    "docs/playbooks/backend/run-full-codebase-audit.md",
+    "docs/playbooks/backend/run-uncommitted-changes-audit.md",
+    "docs/playbooks/backend/ui-analysis.md",
+    "docs/playbooks/bpmn/analyze-brd-for-bpmn.md",
+    "docs/playbooks/bpmn/derive-bpmn-flow-from-analysis.md",
+    "docs/playbooks/bpmn/generate-bpmn-from-brd.md",
+    "docs/playbooks/bpmn/generate-bpmn-workflow-from-story.md",
+    "docs/playbooks/bpmn/review-bpmn-workflow.md",
+    "docs/playbooks/db/data-migration-workflow.md",
+    "docs/playbooks/db/gap-analysis-workflow.md",
+    "docs/playbooks/db/initialize-workspace.md",
+    "docs/playbooks/db/onboarding-guide.md",
+    "docs/playbooks/db/review-cycle-workflow.md",
+    "docs/playbooks/db/run-uncommitted-changes-audit.md",
+    "docs/playbooks/db/schema-design-workflow.md",
+    "docs/playbooks/db/sp-development-workflow.md",
+    "docs/playbooks/frontend/build-feature-from-plan.md",
+    "docs/playbooks/frontend/build-feature-from-story-and-figma.md",
+    "docs/playbooks/frontend/evaluate-output-quality.md",
+    "docs/playbooks/frontend/evaluate-reverse-engineer-document.md",
+    "docs/playbooks/frontend/generate-component-test-cases.md",
+    "docs/playbooks/frontend/generate-evaluation-matrix.md",
+    "docs/playbooks/frontend/generate-unit-test-cases.md",
+    "docs/playbooks/frontend/plan-feature-from-story-and-figma.md",
+    "docs/playbooks/frontend/reverse-engineer-application.md",
+    "docs/playbooks/frontend/run-full-codebase-audit.md",
+    "docs/playbooks/frontend/run-uncommitted-changes-audit.md",
+    "docs/playbooks/frontend/ui-analysis.md",
+    "docs/playbooks/initialize-workspace.md",
+    "docs/playbooks/onboarding-guide.md",
+    "docs/playbooks/qa/generate-automation-scripts.md",
+    "docs/playbooks/qa/generate-tc-ts-from-figma.md",
+    "docs/playbooks/qa/initialize-workspace.md",
+    "docs/playbooks/qa/reset-workspace.md",
+    "docs/playbooks/qa/run-full-codebase-audit.md",
+    "docs/playbooks/qa/run-uncommitted-changes-audit.md",
+    "docs/playbooks/qa/update-tc-ts-figma.md",
+    "docs/references/FOLDER-STRUCTURE.md",
+    "docs/references/GLOSSARY.md",
+    "docs/standards/capabilities/architecture/api.md",
+    "docs/standards/capabilities/architecture/events.md",
+    "docs/standards/capabilities/architecture/modular-boundaries.md",
+    "docs/standards/capabilities/architecture/workers.md",
+    "docs/standards/capabilities/database/data-contracts.md",
+    "docs/standards/capabilities/database/relational-schema.md",
+    "docs/standards/capabilities/database/stored-procedures.md",
+    "docs/standards/capabilities/framework/angular.md",
+    "docs/standards/capabilities/framework/aspnet-core.md",
+    "docs/standards/capabilities/framework/react.md",
+    "docs/standards/capabilities/framework/spring-boot.md",
+    "docs/standards/capabilities/language/csharp.md",
+    "docs/standards/capabilities/language/java.md",
+    "docs/standards/capabilities/language/sql.md",
+    "docs/standards/capabilities/language/typescript.md",
+    "docs/standards/capabilities/platform/aws.md",
+    "docs/standards/capabilities/platform/azure.md",
+    "docs/standards/capabilities/platform/gcp.md",
+    "docs/standards/capabilities/platform/onprem.md",
+    "docs/standards/capabilities/testing/junit.md",
+    "docs/standards/capabilities/testing/playwright.md",
+    "docs/standards/capabilities/testing/testng.md",
+    "docs/standards/capabilities/testing/vitest.md",
+    "docs/standards/capabilities/testing/xunit.md",
+    "docs/standards/clients/aircomm-carrier/overlays/README.md",
+    "docs/standards/clients/aircomm-carrier/profile.yaml",
+    "docs/standards/common/capability-governance-baseline.md",
+    "docs/standards/common/markdown-output-standards.md",
+    "docs/standards/common/prompt-writing-standards.md",
+    "docs/standards/common/security-baseline.md",
+    "docs/standards/domains/ba/README.md",
+    "docs/standards/domains/bpmn/cascade2_bpmn_standards.md",
+    "docs/standards/domains/db/db-schema-design-standards.md",
+    "docs/standards/domains/db/sp-coding-standards.md",
+    "docs/standards/domains/qa/RULES.md",
+    "README.md",
+    "templates/ba/evaluation-matrix-template.md",
+    "templates/ba/functional-reqs-doc-template.md",
+    "templates/ba/gap-analysis-template.md",
+    "templates/ba/lld-from-frd-or-feature-template.md",
+    "templates/ba/reverse-engineering-design-template.md",
+    "templates/ba/ui-analysis-template.md",
+    "templates/ba/user-story-template.md",
+    "templates/backend/audit-fullcodebase-report-template.md",
+    "templates/backend/audit-uncommitted-changes-report-template.md",
+    "templates/backend/defect-report-template.md",
+    "templates/backend/evaluation-matrix-template.md",
+    "templates/backend/feature-implementation-plan-template.md",
+    "templates/backend/functional-reqs-doc-template.md",
+    "templates/backend/test-case-unit-template.md",
+    "templates/backend/ui-analysis-template.md",
+    "templates/bpmn/generate-bpmn-workflow-from-story.template.md",
+    "templates/db/audit-report-template.md",
+    "templates/db/data-dictionary-change-report-template.md",
+    "templates/db/deployment-checklist-template.md",
+    "templates/db/gap-analysis-template.md",
+    "templates/db/schema-review-template.md",
+    "templates/db/sp-review-template.md",
+    "templates/frontend/audit-fullcodebase-report-template.md",
+    "templates/frontend/audit-uncommitted-changes-report-template.md",
+    "templates/frontend/defect-report-template.md",
+    "templates/frontend/evaluation-matrix-template.md",
+    "templates/frontend/feature-implementation-plan-template.md",
+    "templates/frontend/test-case-component-template.md",
+    "templates/frontend/test-case-unit-template.md",
+    "templates/qa/bug-report-template.md",
+    "templates/qa/generate-automation-scripts-template.md",
+    "templates/qa/generate-tc-ts-from-figma-template.md",
+    "templates/qa/triage-and-fix-failures-template.md",
+    "templates/qa/update-tc-ts-figma-template.md"
+  ],
+  "createIfFolderEmpty": [
+    {
+      "folder": "artifacts/docx",
+      "files": [
+        "artifacts/docx/README.md"
+      ]
+    },
+    {
+      "folder": "artifacts/feature-plans",
+      "files": [
+        "artifacts/feature-plans/README.md"
+      ]
+    },
+    {
+      "folder": "artifacts/functional-requirements",
+      "files": [
+        "artifacts/functional-requirements/README.md"
+      ]
+    },
+    {
+      "folder": "artifacts/gap-analysis",
+      "files": [
+        "artifacts/gap-analysis/README.md"
+      ]
+    },
+    {
+      "folder": "artifacts/lld",
+      "files": [
+        "artifacts/lld/README.md"
+      ]
+    },
+    {
+      "folder": "artifacts/reverse-engineer-analysis",
+      "files": [
+        "artifacts/reverse-engineer-analysis/README.md"
+      ]
+    },
+    {
+      "folder": "artifacts/ui-analysis",
+      "files": [
+        "artifacts/ui-analysis/README.md"
+      ]
+    },
+    {
+      "folder": "artifacts/user-stories",
+      "files": [
+        "artifacts/user-stories/README.md"
+      ]
+    },
+    {
+      "folder": "reports/audits/full-codebase",
+      "files": [
+        "reports/audits/full-codebase/README.md"
+      ]
+    },
+    {
+      "folder": "reports/audits/uncommitted-changes",
+      "files": [
+        "reports/audits/uncommitted-changes/README.md"
+      ]
+    },
+    {
+      "folder": "reports/evaluations",
+      "files": [
+        "reports/evaluations/README.md"
+      ]
+    },
+    {
+      "folder": "reports/test-coverage",
+      "files": [
+        "reports/test-coverage/README.md"
+      ]
+    },
+    {
+      "folder": "reports/test-execution",
+      "files": [
+        "reports/test-execution/README.md"
+      ]
+    }
+  ],
+  "packagedArtifacts": [
+    {
+      "path": "initializer-release-notes.md",
+      "behavior": "report-only"
+    },
+    {
+      "path": "workspace-ai-initialization-guide.md",
+      "behavior": "report-only"
+    }
+  ],
+  "validatorChecks": {
+    "requireUniqueRequiredFolders": true,
+    "requireUniqueRequiredFiles": true,
+    "forbidOverlapWithPackagedArtifacts": true,
+    "requireRelativePaths": true,
+    "requireNormalizedSeparators": true,
+    "requireTargetRegistry": true,
+    "requireTargetChecksumsForSeededFiles": true,
+    "requireTargetSourcePathsForSeededFiles": true
+  },
+  "packPolicy": {
+    "mode": "manifest-and-pack",
+    "sourceModel": "manifest-and-pack-only",
+    "packBasePath": ".github/initializer/packs",
+    "bootstrapPromptsStayOutsidePacks": true,
+    "failOnMissingPackSource": true
+  },
+  "migrations": {
+    "enabled": true,
+    "stateFile": ".init_state/initializer-version.json",
+    "defaultMode": "auto",
+    "supportedModes": [
+      "auto",
+      "bootstrap",
+      "migrate",
+      "reseed",
+      "audit"
+    ],
+    "deltaStrategy": "checksum-diff-with-missing-required-target-repair",
+    "preserveStateOnCleanup": true,
+    "stateSchemaVersion": "2.0"
+  },
+  "resetPolicy": {
+    "bootstrapPromptsStayOutsidePacks": true,
+    "bootstrapPromptPaths": [
+      ".github/prompts/initialize-ai-workspace.prompt.md",
+      ".github/prompts/reset-ai-workspace.prompt.md"
+    ],
+    "stateFile": ".init_state/initializer-version.json",
+    "removeStateOnReset": true,
+    "fileInventorySource": "requiredFiles+createIfFolderEmpty",
+    "folderInventorySource": "requiredFolders",
+    "packagedArtifactsSource": "packagedArtifacts",
+    "protectedPaths": [
+      ".github/prompts/initialize-ai-workspace.prompt.md",
+      ".github/prompts/reset-ai-workspace.prompt.md",
+      ".github/copilot-instructions.md",
+      "docs/onboarding/initializer-release-notes.md",
+      "docs/onboarding/workspace-ai-initialization-guide.md"
+    ],
+    "emptyOutputFoldersRemoveOnReset": [
+      "artifacts/",
+      "reports/",
+      "test-assets/"
+    ]
+  },
+  "targets": [
+    {
+      "targetPath": ".githooks/pre-push",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.githooks/pre-push",
+      "checksumSha256": "fb64226870cb4420929aa98f6eb8e4c83e942738bb49a00e87944eac51db4030"
+    },
+    {
+      "targetPath": ".github/copilot-instructions.md",
+      "applyMode": "preserve-meaningful",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/copilot-instructions.md",
+      "checksumSha256": "1edae40194f5b99f1e8d5e887894e31714d90902212d79310580833ad193cf06"
+    },
+    {
+      "targetPath": ".github/copilot-instructions.md",
+      "applyMode": "preserve-meaningful",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/copilot-instructions.md",
+      "checksumSha256": "1edae40194f5b99f1e8d5e887894e31714d90902212d79310580833ad193cf06"
+    },
+    {
+      "targetPath": ".github/hooks/detect-stack.cjs",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/hooks/detect-stack.cjs",
+      "checksumSha256": "f0bc9f1b54372a898bb70b4e6e9ac829dc7b96d81341cf6b2a829860a6a482bd"
+    },
+    {
+      "targetPath": ".github/hooks/format.json",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/hooks/format.json",
+      "checksumSha256": "cde3b5babe133fd936d06fc540695d07b1d210f8154f06a88d5652e672ea6956"
+    },
+    {
+      "targetPath": ".github/hooks/pre-push-audit-gate.config.json",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/hooks/pre-push-audit-gate.config.json",
+      "checksumSha256": "8e805d42d50b0a86b71f5d2fa6c6582638a341a4d46e4eaf1f88e0f79d90610b"
+    },
+    {
+      "targetPath": ".github/hooks/pre-push-audit-gate.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/hooks/pre-push-audit-gate.js",
+      "checksumSha256": "4423a00d3222db929702b02fa422f45699bfe50e42afddda6901d309cf252f2d"
+    },
+    {
+      "targetPath": ".github/hooks/README.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/hooks/README.md",
+      "checksumSha256": "aa9caa20287942ded3d5900600238f044c04108ca305832a60409c019c66d8e9"
+    },
+    {
+      "targetPath": ".github/hooks/run-post-tool-checks.cjs",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/hooks/run-post-tool-checks.cjs",
+      "checksumSha256": "9bef2a0aeb18cd490d66c6ed8561eb9f06cb9bc006c0d0400f129c7355098828"
+    },
+    {
+      "targetPath": ".github/initializer/client-inputs/client-onboarding-questionnaire.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/client-inputs/client-onboarding-questionnaire.md",
+      "checksumSha256": "712c583448ad452cc7fe2663ce2b054362898c08be07a55db3f008142c0c46b1"
+    },
+    {
+      "targetPath": ".github/initializer/client-inputs/client-onboarding-response-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/client-inputs/client-onboarding-response-template.md",
+      "checksumSha256": "ec91804a59ee5a63e30fa992178716482cde9c81eace111ef9c9639201dc3db6"
+    },
+    {
+      "targetPath": ".github/initializer/owner-guides/hooks/hooks-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-guides/hooks/hooks-guide.md",
+      "checksumSha256": "4ebb66bbc48f27d5c16fe9f699eee739a9e522c034a507e24e6cbc94c82ee4ae"
+    },
+    {
+      "targetPath": ".github/initializer/owner-guides/policies/audit-stack-routing-policy-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-guides/policies/audit-stack-routing-policy-guide.md",
+      "checksumSha256": "3ca46c04549a91030190053e13e0b319ddb7b75bee04cc26404b636f3af43748"
+    },
+    {
+      "targetPath": ".github/initializer/owner-guides/prompts/onboard-new-client-prompt-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-guides/prompts/onboard-new-client-prompt-guide.md",
+      "checksumSha256": "e91c1be44c205097ffc883948522f979364217d6a1add360c69fcf1b3da6a416"
+    },
+    {
+      "targetPath": ".github/initializer/owner-guides/prompts/update-client-profile-prompt-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-guides/prompts/update-client-profile-prompt-guide.md",
+      "checksumSha256": "bd55e5af05635a7084c05339edfbbabe3d28aa1bfc667ba6bf2a3b77610b20e8"
+    },
+    {
+      "targetPath": ".github/initializer/owner-guides/standards/standards-resolution-user-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-guides/standards/standards-resolution-user-guide.md",
+      "checksumSha256": "b98363f6f1d9990681aa52afde9895ad8a4dd8ea4127be42771f2879695560d6"
+    },
+    {
+      "targetPath": ".github/initializer/owner-guides/tools/onboard-new-client-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-guides/tools/onboard-new-client-guide.md",
+      "checksumSha256": "426ac291d9ebf10d49c9b6676a4820762314dd9cadcfd84436b3caae85264174"
+    },
+    {
+      "targetPath": ".github/initializer/owner-guides/tools/update-client-profile-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-guides/tools/update-client-profile-guide.md",
+      "checksumSha256": "a4a22fc33bbb1c534c0f8775c440190c239b28658e9822d7dfcbb47d5647ec2f"
+    },
+    {
+      "targetPath": ".github/initializer/owner-prompts/onboard-new-client.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-prompts/onboard-new-client.prompt.md",
+      "checksumSha256": "a5f5491ecead680333c2d313fe87fb58a10123a0717861b2bcdc87ad822370f3"
+    },
+    {
+      "targetPath": ".github/initializer/owner-prompts/update-client-profile.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/owner-prompts/update-client-profile.prompt.md",
+      "checksumSha256": "9b917d139f994bce62d7b52179ce2ad37df035e3aedb326f753544d15c55ad1f"
+    },
+    {
+      "targetPath": ".github/initializer/tools/finalize-distribution.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/finalize-distribution.js",
+      "checksumSha256": "47bbe6edaaa092ea4e37454abfd2106d854a5c488da6ffbfdcdf00a4dc905b0a"
+    },
+    {
+      "targetPath": ".github/initializer/tools/generate-prompt-adoption-report.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/generate-prompt-adoption-report.js",
+      "checksumSha256": "c2a360091bade4820cbc8a2397b69ddea0be14b7583ab379e0f456dd41ad0660"
+    },
+    {
+      "targetPath": ".github/initializer/tools/initialize-workspace.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/initialize-workspace.js",
+      "checksumSha256": "eb04989a47882ec4a795a110c82ef77b936f4487de80ec654c5ebd1218b745a6"
+    },
+    {
+      "targetPath": ".github/initializer/tools/log-prompt-usage.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/log-prompt-usage.js",
+      "checksumSha256": "146debffd8c60963615c20eda98b1ca2bb62e409d782922fee5ca94437bfcb20"
+    },
+    {
+      "targetPath": ".github/initializer/tools/onboard-new-client.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/onboard-new-client.js",
+      "checksumSha256": "7b4780bdabfe40cd58fe93c6c8b6ecdb4940ac1cc8bfa62bb5e16e6f23333f18"
+    },
+    {
+      "targetPath": ".github/initializer/tools/sync-owner-from-zip.js",
+      "applyMode": "bootstrap-protected",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/sync-owner-from-zip.js",
+      "checksumSha256": "dbe288878b024a4885831f9487188af66b1a2183408c3f07c71064f3d17a0083"
+    },
+    {
+      "targetPath": ".github/initializer/tools/sync-seed-manifest.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/sync-seed-manifest.js",
+      "checksumSha256": "54063a06e1e262021fb8833c33f1805db1170cfa23579171ee25ad984d70d0d7"
+    },
+    {
+      "targetPath": ".github/initializer/tools/update-client-profile.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/update-client-profile.js",
+      "checksumSha256": "3f41c86dce91ad738541db873103b88d86de39dff8e845502a4cad1bca997615"
+    },
+    {
+      "targetPath": ".github/initializer/tools/watch-owner-loop.js",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.github/initializer/tools/watch-owner-loop.js",
+      "checksumSha256": "188aa15462abb316f528dc2dd72137dd6bc4b0d5bd7618ac72a16e84be08cc69"
+    },
+    {
+      "targetPath": ".github/prompts/audit-fullcodebase.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/audit-fullcodebase.prompt.md",
+      "checksumSha256": "9b7d2482aa4a2fc74e158d0db8e82261a4fad7a73af48efe1897adf8835a6e5a"
+    },
+    {
+      "targetPath": ".github/prompts/audit-uncommitted-changes.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/audit-uncommitted-changes.prompt.md",
+      "checksumSha256": "c61c077c9e45a72a66de9836f085fe2fb57ad2907464c83bdfb658cc6fdc5140"
+    },
+    {
+      "targetPath": ".github/prompts/ba-evaluate-reverse-engineer-document.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-evaluate-reverse-engineer-document.prompt.md",
+      "checksumSha256": "6d2b29ee3274d1c95417c407875da8a3d89014eddc72cbc4500c7a433665404a"
+    },
+    {
+      "targetPath": ".github/prompts/ba-generate-functional-requirements.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-generate-functional-requirements.prompt.md",
+      "checksumSha256": "252d9d5058c54e211f7e7ad2cd960d9f8a038c8bbb232e5d93c05ce5b6ea6d59"
+    },
+    {
+      "targetPath": ".github/prompts/ba-generate-gap-analysis.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-generate-gap-analysis.prompt.md",
+      "checksumSha256": "8a38ab037115172dc6e4b7761f1f96de35e9f5932758462ae7c10a053a510a89"
+    },
+    {
+      "targetPath": ".github/prompts/ba-generate-lld-from-frd-or-feature.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-generate-lld-from-frd-or-feature.prompt.md",
+      "checksumSha256": "5fbd532fd0bab0779f9475eddbbc92bfcb45767d0953fe9ab40b39c150796957"
+    },
+    {
+      "targetPath": ".github/prompts/ba-generate-user-stories.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-generate-user-stories.prompt.md",
+      "checksumSha256": "878429714627470688753b21059b1d3418c65790d3d64a7cca8c933dc10d45eb"
+    },
+    {
+      "targetPath": ".github/prompts/ba-refine-user-story-backend.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-refine-user-story-backend.prompt.md",
+      "checksumSha256": "f4eb6397c3c2c9f1807251d5864cafb095c34b2e45f1a5338fd2095248fb48d0"
+    },
+    {
+      "targetPath": ".github/prompts/ba-refine-user-story-frontend.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-refine-user-story-frontend.prompt.md",
+      "checksumSha256": "65a8fecc0849935d17f97832d3d78f97afe129939377633ad9459b997d94d54d"
+    },
+    {
+      "targetPath": ".github/prompts/ba-refine-user-story-qa.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-refine-user-story-qa.prompt.md",
+      "checksumSha256": "e50e255570b1fea9e2483addad8d6d24c98ca98b5a41c53bbdb22acabce2d242"
+    },
+    {
+      "targetPath": ".github/prompts/ba-reverse-engineer-application.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-reverse-engineer-application.prompt.md",
+      "checksumSha256": "e309169446c35900d82d2cf2f1a548262a6d3d917dc0cbb6a1c8285be3ea2209"
+    },
+    {
+      "targetPath": ".github/prompts/ba-ui-analysis.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/ba-ui-analysis.prompt.md",
+      "checksumSha256": "1975ebc21c8eb626092523b3fdd2bf45177ecae4c9015d1c22c6638f75f51003"
+    },
+    {
+      "targetPath": ".github/prompts/backend-build-feature-from-plan.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/backend-build-feature-from-plan.prompt.md",
+      "checksumSha256": "191a061a28fc8e1f42ab371f6d744ed0aa6d97ae2e22eafddfe36e28efa0648f"
+    },
+    {
+      "targetPath": ".github/prompts/backend-build-feature-from-story-and-figma.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/backend-build-feature-from-story-and-figma.prompt.md",
+      "checksumSha256": "5d2dbef270788c3c867d605fed721387b6f675bfe1549d63416ceaff300c962b"
+    },
+    {
+      "targetPath": ".github/prompts/backend-generate-evaluation-matrix.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/backend-generate-evaluation-matrix.prompt.md",
+      "checksumSha256": "2c3904e441d24b91fe071ad3637490d51d89a1987ee6dc754377e8c9cd8b76ea"
+    },
+    {
+      "targetPath": ".github/prompts/backend-generate-unit-test-cases.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/backend-generate-unit-test-cases.prompt.md",
+      "checksumSha256": "5b8507ad515201cfc0c4ced9ec74a0ba76518028964ad91f9cb4789854244815"
+    },
+    {
+      "targetPath": ".github/prompts/backend-plan-feature-from-story-and-figma.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/backend-plan-feature-from-story-and-figma.prompt.md",
+      "checksumSha256": "7ad5e5a7ce38f9d49ae55b3133489963f74018274063f155a8707143902265df"
+    },
+    {
+      "targetPath": ".github/prompts/backend-ui-analysis.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/backend-ui-analysis.prompt.md",
+      "checksumSha256": "7ff02040c724e581ba680c5e9119371b37fa4e747ca17cebd01f75eb5dd5c605"
+    },
+    {
+      "targetPath": ".github/prompts/bpmn-analyze-brd-for-bpmn.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/bpmn-analyze-brd-for-bpmn.prompt.md",
+      "checksumSha256": "af84d5382875dc968cdc2c71d5476f788210739f2e61b363889d42a2b4c1ea77"
+    },
+    {
+      "targetPath": ".github/prompts/bpmn-derive-bpmn-flow-from-analysis.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/bpmn-derive-bpmn-flow-from-analysis.prompt.md",
+      "checksumSha256": "e54b886f9de66def6a56c4a8f14f62ad57a5623b18f445d74eba8edfa4378974"
+    },
+    {
+      "targetPath": ".github/prompts/bpmn-generate-bpmn-from-brd.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/bpmn-generate-bpmn-from-brd.prompt.md",
+      "checksumSha256": "ff585ea6e7127ba66cb7936056cf0866956c6f1d5f85b58d45f7684e0b7cd526"
+    },
+    {
+      "targetPath": ".github/prompts/bpmn-generate-bpmn-workflow-from-story.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/bpmn-generate-bpmn-workflow-from-story.prompt.md",
+      "checksumSha256": "3d3f00b6a59d5ff3fc9e8ad6408b611d0ba3feec59d39105f1f67a18ea11cc46"
+    },
+    {
+      "targetPath": ".github/prompts/bpmn-review-bpmn-workflow.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/bpmn-review-bpmn-workflow.prompt.md",
+      "checksumSha256": "54819ba3ae5ebee7b5fb544c9e79aa7fbd6d149d491479bddc7c4df835707256"
+    },
+    {
+      "targetPath": ".github/prompts/db-address-review-comments.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-address-review-comments.prompt.md",
+      "checksumSha256": "20f14c38275c8f87157c4f1c4f6754becfa8f2c6b071c28aa82a5eb3a8b8e9db"
+    },
+    {
+      "targetPath": ".github/prompts/db-generate-all-artifacts.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-generate-all-artifacts.prompt.md",
+      "checksumSha256": "03aef39a7b1624ec7ff24b4c5810aa5a7b844614f1d7704ffd05a1bc3b153667"
+    },
+    {
+      "targetPath": ".github/prompts/db-generate-data-dictionary.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-generate-data-dictionary.prompt.md",
+      "checksumSha256": "040c6f981b1c9836a7e6eaaa032d2c0f715e408595140e475a176aceb037882d"
+    },
+    {
+      "targetPath": ".github/prompts/db-generate-er-diagram.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-generate-er-diagram.prompt.md",
+      "checksumSha256": "b5888ede1df878479891e492d7c0bceeebe822c698b46ee2d6d6b780bac2d39a"
+    },
+    {
+      "targetPath": ".github/prompts/db-generate-gap-analysis.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-generate-gap-analysis.prompt.md",
+      "checksumSha256": "f425e3fe20f36dd5815259bcd6af74a17aff3a6f11ff06158a7162d8f65a466d"
+    },
+    {
+      "targetPath": ".github/prompts/db-generate-lookup-seed-scripts.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-generate-lookup-seed-scripts.prompt.md",
+      "checksumSha256": "04828eda62cdf9ed4f489bef92be0aec79af18bb4ae6efedf2660a3d86f9a5e7"
+    },
+    {
+      "targetPath": ".github/prompts/db-generate-schema-script.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-generate-schema-script.prompt.md",
+      "checksumSha256": "5e56fa8eb4580bd4d084fc59aadca92784f0c410b2eba67cd1ebc7c7fe1968bf"
+    },
+    {
+      "targetPath": ".github/prompts/db-generate-stored-procedures.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-generate-stored-procedures.prompt.md",
+      "checksumSha256": "b28aa00ff9d6c56aa3f82607878dbe1777c303c2a68270124c06f49171cad921"
+    },
+    {
+      "targetPath": ".github/prompts/db-normalize-json-source.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-normalize-json-source.prompt.md",
+      "checksumSha256": "95c08edf37816cb3b5e902fbffe8db3a6f423af63b723c1f762fd86a6e8eeecd"
+    },
+    {
+      "targetPath": ".github/prompts/db-post-deployment-preparation.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-post-deployment-preparation.prompt.md",
+      "checksumSha256": "93fdffbfe5b817e92027fa18bbc31061e76897856cbfe822c68dd39e851b0a95"
+    },
+    {
+      "targetPath": ".github/prompts/db-review-stored-procedure.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-review-stored-procedure.prompt.md",
+      "checksumSha256": "c55169219823a45fe0e1dc90852ad5aa933cb4e4fdfca90f9a3bf894778a9eea"
+    },
+    {
+      "targetPath": ".github/prompts/db-schema-change-impact.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/db-schema-change-impact.prompt.md",
+      "checksumSha256": "fd2fd0e864d962bd3a54e35c4a47e08a26a3e1ec96e077c3572c0f566b5b6839"
+    },
+    {
+      "targetPath": ".github/prompts/evaluate-output-quality.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/evaluate-output-quality.prompt.md",
+      "checksumSha256": "d52a83517e88465aba6bd7f0addb0a1047d185ea2bf2e29d8a78db1249e0911f"
+    },
+    {
+      "targetPath": ".github/prompts/frontend-build-feature-from-plan.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/frontend-build-feature-from-plan.prompt.md",
+      "checksumSha256": "b839c78db740bb9c95772ff86d54e8e30e777a6f5522ea66ea97f4e934d78ed3"
+    },
+    {
+      "targetPath": ".github/prompts/frontend-build-feature-from-story-and-figma.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/frontend-build-feature-from-story-and-figma.prompt.md",
+      "checksumSha256": "e67958842ba33fffc3a6d8c9b36914c0dc684ced46a7962525671305f07ddf4c"
+    },
+    {
+      "targetPath": ".github/prompts/frontend-generate-component-test-cases.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/frontend-generate-component-test-cases.prompt.md",
+      "checksumSha256": "d4a045e37db9cc448912a4ff28c320a875db15763c1845235630e7221b0e33ed"
+    },
+    {
+      "targetPath": ".github/prompts/frontend-generate-evaluation-matrix.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/frontend-generate-evaluation-matrix.prompt.md",
+      "checksumSha256": "fd0b614ea90d9e67e83d4b5a3876adca97fb52950686da8a788686db2b065c4e"
+    },
+    {
+      "targetPath": ".github/prompts/frontend-generate-unit-test-cases.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/frontend-generate-unit-test-cases.prompt.md",
+      "checksumSha256": "08540fca525007f050c1d55a1bcd8046700c263b2a50dde7cf8f0762dcd94acc"
+    },
+    {
+      "targetPath": ".github/prompts/frontend-plan-feature-from-story-and-figma.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/frontend-plan-feature-from-story-and-figma.prompt.md",
+      "checksumSha256": "1055a9f3ae26b10bfeb8fe891cc916e244b59d28ef6cfe5880f2561c89734092"
+    },
+    {
+      "targetPath": ".github/prompts/initialize-ai-workspace.prompt.md",
+      "applyMode": "bootstrap-protected",
+      "compareMode": "none"
+    },
+    {
+      "targetPath": ".github/prompts/initialize-ai-workspace.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/initialize-ai-workspace.prompt.md",
+      "checksumSha256": "2d6e592b337627e42c3f19f3683d97d8796032ca3ee34f434a13692599e5a9a7"
+    },
+    {
+      "targetPath": ".github/prompts/qa-bug-report.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/qa-bug-report.prompt.md",
+      "checksumSha256": "667e6040db5ecd74e8d2afb7ef04a2e3f8887ff983090a81cd11c4f4e18a46ef"
+    },
+    {
+      "targetPath": ".github/prompts/qa-generate-automation-scripts.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/qa-generate-automation-scripts.prompt.md",
+      "checksumSha256": "34a64b62d094f123b7928f3f1e6c1da78defa519d1f3ba201230ce04c0fd8d12"
+    },
+    {
+      "targetPath": ".github/prompts/qa-generate-tc-ts-from-figma.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/qa-generate-tc-ts-from-figma.prompt.md",
+      "checksumSha256": "7cdf219c3c7371acb62d9c1e046b8879b2483f0d4c5430190066f826352a2f97"
+    },
+    {
+      "targetPath": ".github/prompts/qa-triage-and-fix-failures.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/qa-triage-and-fix-failures.prompt.md",
+      "checksumSha256": "3c83fbc32fd9adb61a8bf15e3c54063551543e0296673c0fb7986aa8902874e5"
+    },
+    {
+      "targetPath": ".github/prompts/qa-update-tc-ts-figma.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/qa-update-tc-ts-figma.prompt.md",
+      "checksumSha256": "2065dcb88523697e10147ae228b7abeb073d6bf137bcef0b87a35e8288f25a7f"
+    },
+    {
+      "targetPath": ".github/prompts/README.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/README.md",
+      "checksumSha256": "b1a04ff6b3de93f3304d95bd01c35cbbe95408f01b1a4a9560f0497c44e62a03"
+    },
+    {
+      "targetPath": ".github/prompts/report-prompt-adoption.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/report-prompt-adoption.prompt.md",
+      "checksumSha256": "05252b5e1f72445562e0b2efaa40ab8cf90dbe886521fe4d267e40f7ac470169"
+    },
+    {
+      "targetPath": ".github/prompts/reset-ai-workspace.prompt.md",
+      "applyMode": "bootstrap-protected",
+      "compareMode": "none"
+    },
+    {
+      "targetPath": ".github/prompts/reset-ai-workspace.prompt.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/prompts/reset-ai-workspace.prompt.md",
+      "checksumSha256": "3c117a553b3c1a2b330ef13e8f5757d6ce2f5ae91400778f141cab46fd864963"
+    },
+    {
+      "targetPath": ".github/skills/README.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/README.md",
+      "checksumSha256": "0c59bd74647376705f1f69c30b84d750c9a085fa9e7737a898441355a1555937"
+    },
+    {
+      "targetPath": ".github/skills/skill-ba-analysis/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-ba-analysis/SKILL.md",
+      "checksumSha256": "e9a4a27295d57acd848106c08b49038602040e84d0fe4a338ac1e7fec6dc1454"
+    },
+    {
+      "targetPath": ".github/skills/skill-ba-reverse-engineer-application/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-ba-reverse-engineer-application/SKILL.md",
+      "checksumSha256": "fd5092b6a8b9d816872d13b0289cfcb291ee255fd59a32f06fe7935a75e86a5f"
+    },
+    {
+      "targetPath": ".github/skills/skill-ba-user-story-writing/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-ba-user-story-writing/SKILL.md",
+      "checksumSha256": "66b1af2ad045012834c0d4f322dfd323a93d764c1616739ad61c28304bbc8b4d"
+    },
+    {
+      "targetPath": ".github/skills/skill-backend-ba-analysis/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-backend-ba-analysis/SKILL.md",
+      "checksumSha256": "2266acb6076438b0d407fb2eb3dd069eb44f7fe19951ce7ef9006cdadf038be7"
+    },
+    {
+      "targetPath": ".github/skills/skill-backend-generate-tests/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-backend-generate-tests/SKILL.md",
+      "checksumSha256": "fa435fff95fe5c322455ccc87d0c1ae1982a034c972314488ca5fce51b67a21f"
+    },
+    {
+      "targetPath": ".github/skills/skill-bpmn-brd-analyzer/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-bpmn-brd-analyzer/SKILL.md",
+      "checksumSha256": "50665caa104583a36e113e77fde73bd54df2c0706a95567f3531bc846293b97b"
+    },
+    {
+      "targetPath": ".github/skills/skill-bpmn-flow-deriver/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-bpmn-flow-deriver/SKILL.md",
+      "checksumSha256": "3767b51e209f7346f8de3f3b4af96b501552c29385ecad98bb2d552fcaec1f75"
+    },
+    {
+      "targetPath": ".github/skills/skill-bpmn-generate/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-bpmn-generate/SKILL.md",
+      "checksumSha256": "cddb58b1f59968e09efcd42c964160457e6328647206c2ad3508b53e042fb4fe"
+    },
+    {
+      "targetPath": ".github/skills/skill-bpmn-review/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-bpmn-review/SKILL.md",
+      "checksumSha256": "ad3facced9238764e7eeef2c29e3e7af1699dd77c36d2cf3ec7626c804a08740"
+    },
+    {
+      "targetPath": ".github/skills/skill-bpmn-workflow-generation/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-bpmn-workflow-generation/SKILL.md",
+      "checksumSha256": "63eed6937a5d1969ae46d659ac561d17a004181569325ceebcb54720a413b437"
+    },
+    {
+      "targetPath": ".github/skills/skill-codebase-audit/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-codebase-audit/SKILL.md",
+      "checksumSha256": "2336ec130b3fe0dd36224535ace39e301610afc5a755758cb70f0f704e0c8d37"
+    },
+    {
+      "targetPath": ".github/skills/skill-db-audit-and-quality/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-db-audit-and-quality/SKILL.md",
+      "checksumSha256": "a5c16a9668ef65af0234852c5dc79af78a984c4f05c4ddbf6cef5ce5468d467c"
+    },
+    {
+      "targetPath": ".github/skills/skill-db-change-management/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-db-change-management/SKILL.md",
+      "checksumSha256": "14db263641134e453111163a4114b5c5c7bbe31f65903d576ac54914c19d16b7"
+    },
+    {
+      "targetPath": ".github/skills/skill-db-schema-design/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-db-schema-design/SKILL.md",
+      "checksumSha256": "6b83d73be0779204fc0e553ab4503c3a0787b64e1e62dd43f9ad6fb501b6c560"
+    },
+    {
+      "targetPath": ".github/skills/skill-db-seed-and-deployment/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-db-seed-and-deployment/SKILL.md",
+      "checksumSha256": "d063357c989ab5e6dfd92b5732bd62f44e927a25888e9c281b380e6a56ed1ad9"
+    },
+    {
+      "targetPath": ".github/skills/skill-db-stored-procedures/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-db-stored-procedures/SKILL.md",
+      "checksumSha256": "6e9e8ec3d7342d723cfe728bf4a4f85aaf34efa74e7bb6278552d6515bd96d86"
+    },
+    {
+      "targetPath": ".github/skills/skill-feature-implementation/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-feature-implementation/SKILL.md",
+      "checksumSha256": "1a4039d429636e32daa52d6fc8e9241c97f4c7dd957fdf8e0562d302e7ce3ef9"
+    },
+    {
+      "targetPath": ".github/skills/skill-frontend-generate-tests/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-frontend-generate-tests/SKILL.md",
+      "checksumSha256": "cc03108073a847683ab240c864d502ac6b3f898129bdf8f4dbe5ae196233c027"
+    },
+    {
+      "targetPath": ".github/skills/skill-qa-automation-scripts/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-qa-automation-scripts/SKILL.md",
+      "checksumSha256": "50e6d38114a92a1756d88190321ad73a55f12d1bd046a1b778d41dcb1dd88f80"
+    },
+    {
+      "targetPath": ".github/skills/skill-qa-bug-report/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-qa-bug-report/SKILL.md",
+      "checksumSha256": "8eb4c9655f7394bfd45750c1ae07c64fdab6c19d0b831af6c15948495cbc0fc5"
+    },
+    {
+      "targetPath": ".github/skills/skill-qa-failure-triage-fix/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-qa-failure-triage-fix/SKILL.md",
+      "checksumSha256": "57c5bb600b033b609c05c77f43a907471543eaf1da25025f1629ed895375dbdf"
+    },
+    {
+      "targetPath": ".github/skills/skill-qa-test-case-design/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-qa-test-case-design/SKILL.md",
+      "checksumSha256": "4cbd7eda47ff3bad0c43dbec5fa89a712c046184ded1098a67cbb97a28bf2faf"
+    },
+    {
+      "targetPath": ".github/skills/skill-qa-test-case-update/SKILL.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/skills/skill-qa-test-case-update/SKILL.md",
+      "checksumSha256": "1e3584d7ccff6588af0dfee45de93fd315de77d9cb3fd584a5c946b8640f77d2"
+    },
+    {
+      "targetPath": ".gitignore",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.gitignore",
+      "checksumSha256": "f59b198e588f72c7c8ad13e2db189e1f4e9befb1d88dcee617684424983d83c9"
+    },
+    {
+      "targetPath": ".init_state/prompt-usage.jsonl",
+      "applyMode": "preserve-meaningful",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.init_state/prompt-usage.jsonl",
+      "checksumSha256": "dd042dad0ea8e94d40193896a3848c0097a6314f2ddf5a7fa69db89c5dc006d6"
+    },
+    {
+      "targetPath": ".owner-sync-incoming/README.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/.owner-sync-incoming/README.md",
+      "checksumSha256": "e0db7fcaabc087b9e90927c73ca345cf91ce4e58447e673e4525b10033179e39"
+    },
+    {
+      "targetPath": ".vscode/tasks.json",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/vscode/tasks.json",
+      "checksumSha256": "8ab105501ac8f956eb46a34c2ec8a8ab74faba505c14b6c3a6b2e3c6d7b90845"
+    },
+    {
+      "targetPath": "agent.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/agent.md",
+      "checksumSha256": "2921420eede1a07682b5f6992e3368813e737f776b7d8f627306fef6ee0e00ad"
+    },
+    {
+      "targetPath": "artifacts/docx/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/docx/README.md",
+      "checksumSha256": "43535b9d39b5f66bad5a08eeda09390ee207e7ce03b7c8469fcbcb78a5a444fe",
+      "parentFolder": "artifacts/docx"
+    },
+    {
+      "targetPath": "artifacts/feature-plans/FeatureImplementationPlan_auction-calendar_2026-04-20.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/feature-plans/FeatureImplementationPlan_auction-calendar_2026-04-20.md",
+      "checksumSha256": "398788aecb4fba5baab1444435f7e4778f3574efafdeb33aa4c48e5f912648bc"
+    },
+    {
+      "targetPath": "artifacts/feature-plans/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/feature-plans/README.md",
+      "checksumSha256": "07a060459f7a3e237d33d1124032617708d4a8564f02a170f5c676545ea1ede7",
+      "parentFolder": "artifacts/feature-plans"
+    },
+    {
+      "targetPath": "artifacts/functional-requirements/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/functional-requirements/README.md",
+      "checksumSha256": "12816159fd2a3eea768617fea19cd88ab835dee4a93de0b62bcf69817f225efe",
+      "parentFolder": "artifacts/functional-requirements"
+    },
+    {
+      "targetPath": "artifacts/gap-analysis/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/gap-analysis/README.md",
+      "checksumSha256": "3e42c58d3c5d8f9e4086c3728dcff8669a3277e7f207673979373f36bc0176d2",
+      "parentFolder": "artifacts/gap-analysis"
+    },
+    {
+      "targetPath": "artifacts/lld/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/lld/README.md",
+      "checksumSha256": "6bd9c9ced4bba78e098d94bad8455fe56752cdf4ae62502f7c4ded69fe01491f",
+      "parentFolder": "artifacts/lld"
+    },
+    {
+      "targetPath": "artifacts/reverse-engineer-analysis/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/reverse-engineer-analysis/README.md",
+      "checksumSha256": "43535b9d39b5f66bad5a08eeda09390ee207e7ce03b7c8469fcbcb78a5a444fe",
+      "parentFolder": "artifacts/reverse-engineer-analysis"
+    },
+    {
+      "targetPath": "artifacts/ui-analysis/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/ui-analysis/README.md",
+      "checksumSha256": "43535b9d39b5f66bad5a08eeda09390ee207e7ce03b7c8469fcbcb78a5a444fe",
+      "parentFolder": "artifacts/ui-analysis"
+    },
+    {
+      "targetPath": "artifacts/user-stories/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/artifacts/user-stories/README.md",
+      "checksumSha256": "f17f42df9b0f5618b0f3c9201677b9fe0c7fe4161af871113f3901be0e0bd498",
+      "parentFolder": "artifacts/user-stories"
+    },
+    {
+      "targetPath": "config/client-profiles.json",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/config/client-profiles.json",
+      "checksumSha256": "592a0055f5ef9aeb80064ca49cbb4ef79181aab2187f691c1051d52ba626543b"
+    },
+    {
+      "targetPath": "config/model-routing-policy.json",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/config/model-routing-policy.json",
+      "checksumSha256": "e19d5186a522023f8e4aeeadbb203c2eff093ce9710f139002429554364a7a65"
+    },
+    {
+      "targetPath": "config/prompt-execution-policy.json",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/config/prompt-execution-policy.json",
+      "checksumSha256": "8237763bb23fa8028c856d2a36fff08a8659bc9de745327cfda886e5a29d6ef5"
+    },
+    {
+      "targetPath": "config/standards-catalog.json",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/config/standards-catalog.json",
+      "checksumSha256": "a6047b3985feda7fb6686f6d26aec9d33545094596ff70812ce691185b932066"
+    },
+    {
+      "targetPath": "config/standards-resolution-policy.json",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/config/standards-resolution-policy.json",
+      "checksumSha256": "463ba54acf1a6cafb2b7af452f50dc4a6a8aa60b2cf5ed689bb1c2ab72377719"
+    },
+    {
+      "targetPath": "docs/architecture/agent-skill-template-interaction.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/architecture/agent-skill-template-interaction.md",
+      "checksumSha256": "70cc5589c8af07c9916552d9171cfbd886ed66537bbb6c84fc0f1b47a7635590"
+    },
+    {
+      "targetPath": "docs/architecture/ai-framework-overview.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/architecture/ai-framework-overview.md",
+      "checksumSha256": "9398e546b780068525a36908e237a7c1ba8969633e664ef147a3908395e01a8e"
+    },
+    {
+      "targetPath": "docs/architecture/workflow-design.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/architecture/workflow-design.md",
+      "checksumSha256": "0099ae134f649e8c9f54602b0c62891a7e345727d5efcc4a7b5e0fb5cc6381eb"
+    },
+    {
+      "targetPath": "docs/onboarding/initializer-release-notes.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/docs/onboarding/initializer-release-notes.md",
+      "checksumSha256": "643f5bc441d157e1faba8fadbeb316a541f304c1cbbcdc71123767b594bb5281"
+    },
+    {
+      "targetPath": "docs/onboarding/workspace-ai-initialization-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/docs/onboarding/workspace-ai-initialization-guide.md",
+      "checksumSha256": "115bea4b11febf3221c2364d7b68ab4f0d954db396946e0f3430d40625a112cc"
+    },
+    {
+      "targetPath": "docs/onboarding/workspace-model-routing-policy-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/docs/onboarding/workspace-model-routing-policy-guide.md",
+      "checksumSha256": "f0364a8a1bedca40c5c602fe2bea4423132cab652f4d0edffba9c7f2852dbafc"
+    },
+    {
+      "targetPath": "docs/onboarding/workspace-prompt-execution-policy-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/docs/onboarding/workspace-prompt-execution-policy-guide.md",
+      "checksumSha256": "7d18b167416c5334e40dbe5dc21573f3bf16dc6357356f6133d3d18b21d969b5"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/evaluate-reverse-engineer-document.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/evaluate-reverse-engineer-document.md",
+      "checksumSha256": "fe97eb852b2aff1f718c61d60d3a8e79434f46aa33ec846b5a36c5baacd2dba1"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/generate-functional-requirements.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/generate-functional-requirements.md",
+      "checksumSha256": "39a515dedd10e6aa2629b6f8bed42675d105a9c1f1131fd40833ce5f51c7ee02"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/generate-gap-analysis.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/generate-gap-analysis.md",
+      "checksumSha256": "2c92fd62eded7e10041c40e4493067d89903e0d6b3d976698ace8005afe6cecb"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/generate-user-stories.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/generate-user-stories.md",
+      "checksumSha256": "bf796ecf0b74fe02b6671bbe85ce790aeeb7a790d61bd95acd6254cdb11e1f62"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/refine-user-story-backend.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/refine-user-story-backend.md",
+      "checksumSha256": "e688a6a71bcf7f6c7c3ddceb7ce95bb83518012defcd520c7a0fdc4b7c9e345b"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/refine-user-story-frontend.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/refine-user-story-frontend.md",
+      "checksumSha256": "26a41c496bcc6ba6264367f2035995a841d75e8ff95a236c75b79c99a4d8fa05"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/refine-user-story-qa.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/refine-user-story-qa.md",
+      "checksumSha256": "ffa439a34fd1c44815c5a9af0511f9d25de83eb854b1bcbf911eef89464f0930"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/reverse-engineer-application.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/reverse-engineer-application.md",
+      "checksumSha256": "b817800a2af6d501c6d7c90dc0d394df8243fb6ceee048652ae26bd7457bd011"
+    },
+    {
+      "targetPath": "docs/playbooks/ba/ui-analysis.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/ba/ui-analysis.md",
+      "checksumSha256": "b8ef0a8372eecd5446bedebf92e3d6bfdfe1c50dc4f873f44ca40fb510a9d7ff"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/build-feature-from-plan.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/build-feature-from-plan.md",
+      "checksumSha256": "bb34c1138eacebe45c845dbd299efdfe5efeabfff9d041adb85b3b7d3032da09"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/build-feature-from-story-and-figma.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/build-feature-from-story-and-figma.md",
+      "checksumSha256": "9aa88dc17282efeabd38da7bd25bceef5a548f084535eced0c68b50bd80a1f7d"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/evaluate-output-quality.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/evaluate-output-quality.md",
+      "checksumSha256": "ba9a87c5cc858a0d820cf044436036a5a40a1449afce55fa30cc977a5e7e4100"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/generate-automation-tests.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/generate-automation-tests.md",
+      "checksumSha256": "3cc87b9985078b29b1aece44e6ab8fc98bf1622ef3a95bd0a36a748e0c9d6842"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/generate-component-test-cases.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/generate-component-test-cases.md",
+      "checksumSha256": "485f93b49475e9e47cc4640ec86f448ad84d6d65c23e637ec6758bdb84a5d6a1"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/generate-evaluation-matrix.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/generate-evaluation-matrix.md",
+      "checksumSha256": "5637becc91a7ab310458ea996a4d4579766f50bf485e9fd15b3c37eb3eaa98bd"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/generate-functional-test-cases.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/generate-functional-test-cases.md",
+      "checksumSha256": "c489dc130c477650a9ca546feb590ac75bd7e195f4b5608d2f4eaf05f3440de4"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/generate-integration-test-cases.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/generate-integration-test-cases.md",
+      "checksumSha256": "29cdfadec634c46dd7c9c7af6180ce41be3948507b3b0ea9fdb95cc13f0edb13"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/generate-test-cases.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/generate-test-cases.md",
+      "checksumSha256": "bd79118c258e91530e4ef115ac6bbab9e564bb4d7dfaf7edd5483f05848790e1"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/generate-unit-test-cases.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/generate-unit-test-cases.md",
+      "checksumSha256": "d007689bb17e68ca2593e441c62805cbd8874a14122da4ec98a46d09b0f83905"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/initialize-workspace.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/initialize-workspace.md",
+      "checksumSha256": "4a13e30a00607200653b50ace68ace024028b6be04e29d587a4b5f56a688fb2e"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/onboarding-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/onboarding-guide.md",
+      "checksumSha256": "73c45129f118bbc601a3ed5fecfe8feeea2f3df0ad219fd0b26bfe7c9eb40805"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/plan-feature-from-story-and-figma.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/plan-feature-from-story-and-figma.md",
+      "checksumSha256": "4ff4849b11a29510830f5d09d09b94cfbde232ce0b029f580742c62793438746"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/reset-ai-workspace.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/reset-ai-workspace.md",
+      "checksumSha256": "9bb928ab3d4452635da121a78988a7315cecb1d284b416a3cbb3242c6e243cee"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/reverse-engineer-application.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/reverse-engineer-application.md",
+      "checksumSha256": "b9fe259657648e35c4c10b2d7218cadbcf26ca03093e92421357bb26ad7fb043"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/run-full-codebase-audit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/run-full-codebase-audit.md",
+      "checksumSha256": "eefd0749cc6598f6347aea9851f085df740c543d085178e15aaf33ef2e3bf520"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/run-uncommitted-changes-audit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/run-uncommitted-changes-audit.md",
+      "checksumSha256": "68fae495cfae2c87efa8ec69ce911c5e7b36ec0438b84ac49a9bbb41cda5f2f6"
+    },
+    {
+      "targetPath": "docs/playbooks/backend/ui-analysis.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/backend/ui-analysis.md",
+      "checksumSha256": "cd3f1ae3e4b377b3f1f2d037d3e7b13bd9b3c9498f768d2c584152b781d2a2a1"
+    },
+    {
+      "targetPath": "docs/playbooks/bpmn/analyze-brd-for-bpmn.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/bpmn/analyze-brd-for-bpmn.md",
+      "checksumSha256": "4b42e7c8daa9483ea9c0a329e5d4787122b0d11f1d6a6598d6505a37241a7847"
+    },
+    {
+      "targetPath": "docs/playbooks/bpmn/derive-bpmn-flow-from-analysis.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/bpmn/derive-bpmn-flow-from-analysis.md",
+      "checksumSha256": "fadcaafd3ff24dd36872336a9004aee23d286fe346936b43e9734a4c1768c3f0"
+    },
+    {
+      "targetPath": "docs/playbooks/bpmn/generate-bpmn-from-brd.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/bpmn/generate-bpmn-from-brd.md",
+      "checksumSha256": "14a56b316af516a664007313adc377955b45deb04fd7967d333d3990286f7bc1"
+    },
+    {
+      "targetPath": "docs/playbooks/bpmn/generate-bpmn-workflow-from-story.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/bpmn/generate-bpmn-workflow-from-story.md",
+      "checksumSha256": "1fee3506db31cb3f38fefc6eb410abfd45ba53758b0fc46ff54d807e1bf08b08"
+    },
+    {
+      "targetPath": "docs/playbooks/bpmn/review-bpmn-workflow.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/bpmn/review-bpmn-workflow.md",
+      "checksumSha256": "be94e8ab2966dbf3d8865f5a6690afd97984604ff4b8f1acbd892bcc0edd4923"
+    },
+    {
+      "targetPath": "docs/playbooks/db/data-migration-workflow.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/db/data-migration-workflow.md",
+      "checksumSha256": "25b7e2fde6e9df04e2902d1ccd3dd69cabc27d9bc06fe85db3360aeef13435e7"
+    },
+    {
+      "targetPath": "docs/playbooks/db/gap-analysis-workflow.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/db/gap-analysis-workflow.md",
+      "checksumSha256": "c50aebbba30cbee78b50c430b3c7534812fa28ded9be125a1898be56af4be03f"
+    },
+    {
+      "targetPath": "docs/playbooks/db/initialize-workspace.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/db/initialize-workspace.md",
+      "checksumSha256": "71bbaa698e6ac90bcb1a612003ee8938f1f9bc7717e50fbf8073f1a9f3332eb9"
+    },
+    {
+      "targetPath": "docs/playbooks/db/onboarding-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/db/onboarding-guide.md",
+      "checksumSha256": "a4717659a425b5c2ed14f0575a102a8cb491d553eb3469eaaf63ca084067bfd7"
+    },
+    {
+      "targetPath": "docs/playbooks/db/review-cycle-workflow.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/db/review-cycle-workflow.md",
+      "checksumSha256": "3c611086519ab21bd3906fb55a7134fdbca6ddfc3c9095f27b8c260be61c894a"
+    },
+    {
+      "targetPath": "docs/playbooks/db/run-uncommitted-changes-audit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/db/run-uncommitted-changes-audit.md",
+      "checksumSha256": "8bf24b8311d5023005e9ba3150255aeeeb745f429b87471249b4908c99db76a5"
+    },
+    {
+      "targetPath": "docs/playbooks/db/schema-design-workflow.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/db/schema-design-workflow.md",
+      "checksumSha256": "436014071916d92288889788242f79967ce45def1a207689484239e2e161e26a"
+    },
+    {
+      "targetPath": "docs/playbooks/db/sp-development-workflow.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/db/sp-development-workflow.md",
+      "checksumSha256": "ed7317a5266b5bfe4033fcd5c4e56a5d9b4645b89315083d90c727853762f1cd"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/build-feature-from-plan.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/build-feature-from-plan.md",
+      "checksumSha256": "c6a4e2015000fd7a554f49238bd09ffdfee0f89667f63bdd11c9f1d5cb06bf05"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/build-feature-from-story-and-figma.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/build-feature-from-story-and-figma.md",
+      "checksumSha256": "847182c0d24b03cab5699b2930f326b6ed76b0cae41dcdef9bed052225e5debf"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/evaluate-output-quality.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/evaluate-output-quality.md",
+      "checksumSha256": "53fabd58a9c2c4adf47c2c1de3ef4a7d9021e999b2ea09e671886dd769360aef"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/evaluate-reverse-engineer-document.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/evaluate-reverse-engineer-document.md",
+      "checksumSha256": "ccb12c7bb4935f8634f18b0742c5209d582c3adc2c1f96f6020386f52bb9c8ca"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/generate-component-test-cases.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/generate-component-test-cases.md",
+      "checksumSha256": "c765daab5f58b6ebc13564299929c69cf8d13fa6dd95444b23eee05ba0266468"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/generate-evaluation-matrix.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/generate-evaluation-matrix.md",
+      "checksumSha256": "0049d68d41ffbcdf077120c99b31293d0ba3715b1de5056a6c5a06dc85dc73ae"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/generate-unit-test-cases.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/generate-unit-test-cases.md",
+      "checksumSha256": "1a733a2c8ec5df386a99ad979400d322ba2b74b0d6f382009da236f12d175516"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/plan-feature-from-story-and-figma.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/plan-feature-from-story-and-figma.md",
+      "checksumSha256": "fe659252210e4aa7a4c55da282c5c2eefbf313dd6e0b7e42fed878128228424f"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/reverse-engineer-application.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/reverse-engineer-application.md",
+      "checksumSha256": "344588212bf274a134eedea6ad308b686882976ac62996c2511d125d509dd39a"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/run-full-codebase-audit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/run-full-codebase-audit.md",
+      "checksumSha256": "60e9e55cf0423dd1ed13483b9d00be19c4260c78fbe16b58fdcb48eef5fa08ea"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/run-uncommitted-changes-audit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/run-uncommitted-changes-audit.md",
+      "checksumSha256": "555df0fb022b76bb6b8e0d3d345aac5e0cff85dafcf1211fcc572ac378d9d9c7"
+    },
+    {
+      "targetPath": "docs/playbooks/frontend/ui-analysis.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/frontend/ui-analysis.md",
+      "checksumSha256": "0c68a8549a29bc1ee363b8466c49c17745228bb94a2792991118c5cf93481532"
+    },
+    {
+      "targetPath": "docs/playbooks/initialize-workspace.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/initialize-workspace.md",
+      "checksumSha256": "a731dac9b4ff45fc01fa45b5490f558847a9ecf407397be1ae29c69d25503fa2"
+    },
+    {
+      "targetPath": "docs/playbooks/onboarding-guide.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/onboarding-guide.md",
+      "checksumSha256": "c274d66d2d940a334b193118ddd418367ca8feef1349ced3ada7c8e4ae43701c"
+    },
+    {
+      "targetPath": "docs/playbooks/qa/generate-automation-scripts.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/qa/generate-automation-scripts.md",
+      "checksumSha256": "103565b79862bd3d8e05728b13e06835cec1dc9141e1c7f078a6230ddfa8d7d4"
+    },
+    {
+      "targetPath": "docs/playbooks/qa/generate-tc-ts-from-figma.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/qa/generate-tc-ts-from-figma.md",
+      "checksumSha256": "22bb58fa0acbc2c3178bf1d5c9fe204d39edf332d9a1bf62d7f5ce2862dbe1db"
+    },
+    {
+      "targetPath": "docs/playbooks/qa/initialize-workspace.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/qa/initialize-workspace.md",
+      "checksumSha256": "d795021175ff318f69ea44f37775f3ece53e36494376685d9f000e42190ec836"
+    },
+    {
+      "targetPath": "docs/playbooks/qa/reset-workspace.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/qa/reset-workspace.md",
+      "checksumSha256": "81d921d1cf9d05223cd1a214b3df8c7fec4d805a1950683bc462653e62bcb1e7"
+    },
+    {
+      "targetPath": "docs/playbooks/qa/run-full-codebase-audit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/qa/run-full-codebase-audit.md",
+      "checksumSha256": "ad12d2180b8d910e4ac6f43b21d269d21968afed05a6d9328fdab780a080ceab"
+    },
+    {
+      "targetPath": "docs/playbooks/qa/run-uncommitted-changes-audit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/qa/run-uncommitted-changes-audit.md",
+      "checksumSha256": "4fccee9e127137864fe89c5dd6d0786693954a1b01972fd5f8ae3036f2c60f19"
+    },
+    {
+      "targetPath": "docs/playbooks/qa/update-tc-ts-figma.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/playbooks/qa/update-tc-ts-figma.md",
+      "checksumSha256": "111804359f76fd228dedeec8313155d31bb971352010d9d6c6de0c919a329861"
+    },
+    {
+      "targetPath": "docs/references/FOLDER-STRUCTURE.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/references/FOLDER-STRUCTURE.md",
+      "checksumSha256": "5af1130a606d23ecac37a4793df142e1b05b911e9be5b71acd33df82c2adf82a"
+    },
+    {
+      "targetPath": "docs/references/GLOSSARY.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/references/GLOSSARY.md",
+      "checksumSha256": "b93880b17bc045ef37f0a0e83810c962c7bc2030d9676535db9e24fd6f81079a"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/architecture/api.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/architecture/api.md",
+      "checksumSha256": "04ae6237a466ab41b200791e2e48a6ba6e4e6ca6bba19efdea1aef3111d7f5c6"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/architecture/events.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/architecture/events.md",
+      "checksumSha256": "e382a12bc708ee25a006c7938ec118dc61eefbf9e959345210034a7d705f661e"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/architecture/modular-boundaries.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/architecture/modular-boundaries.md",
+      "checksumSha256": "84ddb43596f355f717834267a5e5eb6b6d9f27c31dc3b798f3dad38fa2968b00"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/architecture/workers.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/architecture/workers.md",
+      "checksumSha256": "43e90d27e42332a7a8252e9e4ca4f3252cf7c14c7f247b305e2c24e363ef2564"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/database/data-contracts.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/database/data-contracts.md",
+      "checksumSha256": "0d80a4b4fce45ae5fcc682b2f9ef28b605f04718fc06964a27938c513df5f7ec"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/database/relational-schema.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/database/relational-schema.md",
+      "checksumSha256": "8867131dcc01ed4e55066e1b0da3cf339ae62715eb90ab9206a19250163d04d9"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/database/stored-procedures.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/database/stored-procedures.md",
+      "checksumSha256": "4cdf02cbb46bbb693a491617e9ff64e8d07f60991218774e181cebb68ba16433"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/framework/angular.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/framework/angular.md",
+      "checksumSha256": "f16eef6ff849c5896a4cc77fbd41dbbd517d672d42953f50e1336bc7bc203d9b"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/framework/aspnet-core.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/framework/aspnet-core.md",
+      "checksumSha256": "2a0736b7033046952be85a35d31c1cfe0843bd41cfb7a6f6bc4a06099236909d"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/framework/react.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/framework/react.md",
+      "checksumSha256": "816076e89519c72ab0788cadb7eef67a584aae9ff09ab8d250466a9450cd63f9"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/framework/spring-boot.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/framework/spring-boot.md",
+      "checksumSha256": "9ffb86be0191b7596cb4a68f5202cfd054f0c9a58ba333bdf5ecbe038638fe9d"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/language/csharp.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/language/csharp.md",
+      "checksumSha256": "7099c21a4c7e7a665d91d591ee6dff9cd8c25d8b080b662068b58d3d1236694c"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/language/java.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/language/java.md",
+      "checksumSha256": "05516c0cabc05ad450846ffb80cfed579ce7dc535b9a71e12ae0c7221aae67f8"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/language/sql.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/language/sql.md",
+      "checksumSha256": "a09f42349c2fefd6504a725e41c15654ad1c99ed01cc944606f7359de5aab567"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/language/typescript.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/language/typescript.md",
+      "checksumSha256": "91ebeb8ead18cf3e1f54a7bd9e7c33a37251f4e31f4c876e0eec16cf5a8c0463"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/platform/aws.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/platform/aws.md",
+      "checksumSha256": "9b1e29f77fd4c4735cf7281aa38fa36bfc62a166efe01d91f770ce6381953a71"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/platform/azure.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/platform/azure.md",
+      "checksumSha256": "d537da589bc845121eeee660cc9aef227ce7bd373cf88dc99218bb3d41efbe4f"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/platform/gcp.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/platform/gcp.md",
+      "checksumSha256": "40d47d7d0e2429ef864933f094be184c6cb7f7977d290d3235ecbd82afbf7d2d"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/platform/onprem.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/platform/onprem.md",
+      "checksumSha256": "76511ee2f7107b49e01899bed5be9b3ada8552eff8c5f9f939cf205e42bd240c"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/testing/junit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/testing/junit.md",
+      "checksumSha256": "f022945706c8eca68fb5b5394bd7104e3c4aeadc516efdb21d349125ed4ddd64"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/testing/playwright.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/testing/playwright.md",
+      "checksumSha256": "d1226f7c7b9ff59f12fe78ff27577c9c85f6ac9137ce7a57b78e964b64705532"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/testing/testng.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/testing/testng.md",
+      "checksumSha256": "1daa62258068f1918995e76c91766cb0db3c2edc4f689aa601841d01951c624d"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/testing/vitest.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/testing/vitest.md",
+      "checksumSha256": "cd8bff58898f337b5350fb80ce72459d27ec5197c246639452ddd7cd2c788299"
+    },
+    {
+      "targetPath": "docs/standards/capabilities/testing/xunit.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/capabilities/testing/xunit.md",
+      "checksumSha256": "1a3fef7d9f96291402297d2d31f9c2e5d53448b9f8ce6443f508b99d2a53cd35"
+    },
+    {
+      "targetPath": "docs/standards/clients/aircomm-carrier/overlays/README.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/clients/aircomm-carrier/overlays/README.md",
+      "checksumSha256": "011d241469e173fed0d7438454ca95b14fc37787b125c74d109fcbd61731b932"
+    },
+    {
+      "targetPath": "docs/standards/clients/aircomm-carrier/profile.yaml",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/clients/aircomm-carrier/profile.yaml",
+      "checksumSha256": "85b57daef1d2efe67ff6621805bb0b146c906edba5059988fada703f94b2ab25"
+    },
+    {
+      "targetPath": "docs/standards/common/capability-governance-baseline.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/common/capability-governance-baseline.md",
+      "checksumSha256": "92f1856eec594e6c5e5503fe0f7ce4cad5d3c53505b144645060fa9f828b14d2"
+    },
+    {
+      "targetPath": "docs/standards/common/markdown-output-standards.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/common/markdown-output-standards.md",
+      "checksumSha256": "70cf2528c1c5ebeff09ca5b54570fa87c084925bdc8ce8da4e355042144d55ec"
+    },
+    {
+      "targetPath": "docs/standards/common/prompt-writing-standards.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/common/prompt-writing-standards.md",
+      "checksumSha256": "6acae7cd5b9334be68560c1694b1a1678f818c14f17265ad070fbfb80917f417"
+    },
+    {
+      "targetPath": "docs/standards/common/security-baseline.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/common/security-baseline.md",
+      "checksumSha256": "b501caedd1ef1b95221f36a1f941f081f8e7828f12fd50e419cb72e8f5c3ed39"
+    },
+    {
+      "targetPath": "docs/standards/domains/ba/README.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/domains/ba/README.md",
+      "checksumSha256": "eb0903b724e5ffadd42e38063a232c37bbc09a26501fe087e26f9a2da25ee82a"
+    },
+    {
+      "targetPath": "docs/standards/domains/bpmn/cascade2_bpmn_standards.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/domains/bpmn/cascade2_bpmn_standards.md",
+      "checksumSha256": "a48300cd257d889b0d5c8a8185987075c50232ee521b1dc56445ad846b767c02"
+    },
+    {
+      "targetPath": "docs/standards/domains/db/db-schema-design-standards.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/domains/db/db-schema-design-standards.md",
+      "checksumSha256": "d32e715deb5ba9d3899346c1098e13d445dc126a2213d0ab67b515f69bb1e06f"
+    },
+    {
+      "targetPath": "docs/standards/domains/db/sp-coding-standards.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/domains/db/sp-coding-standards.md",
+      "checksumSha256": "fd4ca41b98a626c234c2430e0d92959feddc787d4d3b4a8767d6886acda303cc"
+    },
+    {
+      "targetPath": "docs/standards/domains/qa/RULES.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/docs/standards/domains/qa/RULES.md",
+      "checksumSha256": "406c73c26f4d740ddcee571e85e15441deb06f1649e5dc400c90968f42420068"
+    },
+    {
+      "targetPath": "README.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/root/README.md",
+      "checksumSha256": "aa3f51b864a0f92bb6d8644a43bf48d7e6e175abacba601eb214a97bb07de313"
+    },
+    {
+      "targetPath": "reports/audits/full-codebase/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/reports/audits/full-codebase/README.md",
+      "checksumSha256": "43535b9d39b5f66bad5a08eeda09390ee207e7ce03b7c8469fcbcb78a5a444fe",
+      "parentFolder": "reports/audits/full-codebase"
+    },
+    {
+      "targetPath": "reports/audits/uncommitted-changes/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/reports/audits/uncommitted-changes/README.md",
+      "checksumSha256": "43535b9d39b5f66bad5a08eeda09390ee207e7ce03b7c8469fcbcb78a5a444fe",
+      "parentFolder": "reports/audits/uncommitted-changes"
+    },
+    {
+      "targetPath": "reports/evaluations/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/reports/evaluations/README.md",
+      "checksumSha256": "43535b9d39b5f66bad5a08eeda09390ee207e7ce03b7c8469fcbcb78a5a444fe",
+      "parentFolder": "reports/evaluations"
+    },
+    {
+      "targetPath": "reports/test-coverage/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/reports/test-coverage/README.md",
+      "checksumSha256": "43535b9d39b5f66bad5a08eeda09390ee207e7ce03b7c8469fcbcb78a5a444fe",
+      "parentFolder": "reports/test-coverage"
+    },
+    {
+      "targetPath": "reports/test-execution/README.md",
+      "applyMode": "create-if-parent-empty",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/reports/test-execution/README.md",
+      "checksumSha256": "43535b9d39b5f66bad5a08eeda09390ee207e7ce03b7c8469fcbcb78a5a444fe",
+      "parentFolder": "reports/test-execution"
+    },
+    {
+      "targetPath": "templates/ba/evaluation-matrix-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/ba/evaluation-matrix-template.md",
+      "checksumSha256": "7f7f7389fa3e1b5cbc82f06eda20c24239d70edeb7fd58e0be1a8f3397333b5d"
+    },
+    {
+      "targetPath": "templates/ba/functional-reqs-doc-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/ba/functional-reqs-doc-template.md",
+      "checksumSha256": "0b5ab1a99a44eb267a8d2d0f49878bd7c808f4b2bce422e2e9dfc4e431466477"
+    },
+    {
+      "targetPath": "templates/ba/gap-analysis-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/ba/gap-analysis-template.md",
+      "checksumSha256": "5c990599b596391a452c3e17f997ab790d5d2c3b67a537136446058afde9d16c"
+    },
+    {
+      "targetPath": "templates/ba/lld-from-frd-or-feature-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/ba/lld-from-frd-or-feature-template.md",
+      "checksumSha256": "60e8308fcdf0654cc1fa028b187c8e7f36391d4b5e947e70f323d5a57f1a9f60"
+    },
+    {
+      "targetPath": "templates/ba/reverse-engineering-design-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/ba/reverse-engineering-design-template.md",
+      "checksumSha256": "1970ede75ec45c1c5e1fc7b6662017ef743f2f31cb81ffce33515d2a501cfae3"
+    },
+    {
+      "targetPath": "templates/ba/ui-analysis-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/ba/ui-analysis-template.md",
+      "checksumSha256": "9880491c69745a6a4f00fc0e598496ea586f13bf2dea14b968b7e2747d7c4b4d"
+    },
+    {
+      "targetPath": "templates/ba/user-story-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/ba/user-story-template.md",
+      "checksumSha256": "788451ce78db040e19cca2f88ac47cae517fe03dc9883c693240a711baea5dc8"
+    },
+    {
+      "targetPath": "templates/backend/audit-fullcodebase-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/backend/audit-fullcodebase-report-template.md",
+      "checksumSha256": "a72dbd6a31b179e5b2e9f868881d6012db24f8e6f3994dced5f257d24ea63231"
+    },
+    {
+      "targetPath": "templates/backend/audit-uncommitted-changes-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/backend/audit-uncommitted-changes-report-template.md",
+      "checksumSha256": "e9b0c56b21f569f54461e0c1f50162bbb59c42771bc8ddd4bc04cbb9bc0991c3"
+    },
+    {
+      "targetPath": "templates/backend/defect-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/backend/defect-report-template.md",
+      "checksumSha256": "4f1fc31195f178399b39273558ff2ce85f62424bd714cc22d8a4275e25b8924f"
+    },
+    {
+      "targetPath": "templates/backend/evaluation-matrix-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/backend/evaluation-matrix-template.md",
+      "checksumSha256": "54667d029c4d151da5cc4385aac1aab3124fcedda3d37b1f96114f8a5710c022"
+    },
+    {
+      "targetPath": "templates/backend/feature-implementation-plan-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/backend/feature-implementation-plan-template.md",
+      "checksumSha256": "7ca7eeeeb5c59b71564d94f01451034e8e082b432a0d4b3f0ab1ec2753c83167"
+    },
+    {
+      "targetPath": "templates/backend/functional-reqs-doc-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/backend/functional-reqs-doc-template.md",
+      "checksumSha256": "53e7c869049b2c7f18c84a00bd0f62bca87e79ae448c3570db6b99f2174829d1"
+    },
+    {
+      "targetPath": "templates/backend/test-case-unit-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/backend/test-case-unit-template.md",
+      "checksumSha256": "e46877593103f39fb8669a65868ff8367b4a93dc48df8dd283b7d497b0381b7a"
+    },
+    {
+      "targetPath": "templates/backend/ui-analysis-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/backend/ui-analysis-template.md",
+      "checksumSha256": "e943133032e1af956b2cf8c813c1ac6aa0863dfee2843a0ab6302bfd4e238317"
+    },
+    {
+      "targetPath": "templates/bpmn/generate-bpmn-workflow-from-story.template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/bpmn/generate-bpmn-workflow-from-story.template.md",
+      "checksumSha256": "0cadfe3b52c9bc594a59cb3fd3f0440f1b87951e9e09c5c4a43094ec5d91d7da"
+    },
+    {
+      "targetPath": "templates/db/audit-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/db/audit-report-template.md",
+      "checksumSha256": "7c2a3be5226437e9057736a127c5a6c1f8ba8addb206f77fa24d5246d5848e01"
+    },
+    {
+      "targetPath": "templates/db/data-dictionary-change-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/db/data-dictionary-change-report-template.md",
+      "checksumSha256": "abf0e7d45eadda6a0d1822e0856756335d15ad03c503f068d01599351b0028b5"
+    },
+    {
+      "targetPath": "templates/db/deployment-checklist-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/db/deployment-checklist-template.md",
+      "checksumSha256": "7ac217401b40105f351e564fe7d08e3271d6508f5554aebb4caa8a5686329f92"
+    },
+    {
+      "targetPath": "templates/db/gap-analysis-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/db/gap-analysis-template.md",
+      "checksumSha256": "33e496e351a9c38908f58de6c46b08a0ccf73ee6eca025fad01d305799a798ea"
+    },
+    {
+      "targetPath": "templates/db/schema-review-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/db/schema-review-template.md",
+      "checksumSha256": "3fc5d9548ff6e95c0776d8696cf4430a5814ba754d381d34e430d3c11a620b08"
+    },
+    {
+      "targetPath": "templates/db/sp-review-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/db/sp-review-template.md",
+      "checksumSha256": "b1f1cd69fa617ff455ac2fc89a1576c24136bde73e8f26634de5f5d363b3083e"
+    },
+    {
+      "targetPath": "templates/frontend/audit-fullcodebase-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/frontend/audit-fullcodebase-report-template.md",
+      "checksumSha256": "20de1b2dbda101091a7a2901b40578858f151976825533fe7fcedbf0963a9774"
+    },
+    {
+      "targetPath": "templates/frontend/audit-uncommitted-changes-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/frontend/audit-uncommitted-changes-report-template.md",
+      "checksumSha256": "616babfb739ae33a39f40461baed2b913f5c5833bad6a8d734e6c379af0938c7"
+    },
+    {
+      "targetPath": "templates/frontend/defect-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/frontend/defect-report-template.md",
+      "checksumSha256": "5f69ea10822c953793ed817a5b82a9a5a9847767151f6dfebcd573ecd63d4cfc"
+    },
+    {
+      "targetPath": "templates/frontend/evaluation-matrix-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/frontend/evaluation-matrix-template.md",
+      "checksumSha256": "7f7f7389fa3e1b5cbc82f06eda20c24239d70edeb7fd58e0be1a8f3397333b5d"
+    },
+    {
+      "targetPath": "templates/frontend/feature-implementation-plan-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/frontend/feature-implementation-plan-template.md",
+      "checksumSha256": "2c9e91b2be66af303ca379430fb0d08434db1cc997cb0cc69b9ac5957651fb03"
+    },
+    {
+      "targetPath": "templates/frontend/test-case-component-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/frontend/test-case-component-template.md",
+      "checksumSha256": "ba9045f17a9033d3667763341bdddf309e1b989481dae78b6a31afbe024dd31c"
+    },
+    {
+      "targetPath": "templates/frontend/test-case-unit-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/frontend/test-case-unit-template.md",
+      "checksumSha256": "42491f436fcb94c39b8c95d5b708944fb67ae0a15e9b9ead9ac01f1a7f576b8d"
+    },
+    {
+      "targetPath": "templates/qa/bug-report-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/qa/bug-report-template.md",
+      "checksumSha256": "29fb183049e589e51ffe82d959d0421993c3d60279b503bb5564218b6e55585a"
+    },
+    {
+      "targetPath": "templates/qa/generate-automation-scripts-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/qa/generate-automation-scripts-template.md",
+      "checksumSha256": "cb0a02d8fcf7cb6668a8fbb000adabf8f15753845d09b0a4cf7c47d833859bc4"
+    },
+    {
+      "targetPath": "templates/qa/generate-tc-ts-from-figma-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/qa/generate-tc-ts-from-figma-template.md",
+      "checksumSha256": "fd740a97f81ecd9bf19f31be4c98e0cd1421bf9aac98865780ca04065020a5de"
+    },
+    {
+      "targetPath": "templates/qa/triage-and-fix-failures-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/qa/triage-and-fix-failures-template.md",
+      "checksumSha256": "5ddd9d39cc822fd226cd74817f718ee3f7ccae1414dcaa2a342306859dc1ea25"
+    },
+    {
+      "targetPath": "templates/qa/update-tc-ts-figma-template.md",
+      "applyMode": "overwrite",
+      "compareMode": "normalized-exact",
+      "sourcePath": ".github/initializer/packs/templates/qa/update-tc-ts-figma-template.md",
+      "checksumSha256": "f0ed23925bb9837690d186531e52d3353e29c37d86850f2fc6d3826ea1f44ff1"
+    }
+  ]
+}

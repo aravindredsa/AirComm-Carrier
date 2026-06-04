@@ -1,0 +1,408 @@
+{
+  "schemaVersion": "1.0",
+  "description": "Canonical catalog of standards layers, rule groups, and file ownership for the universal standards model.",
+  "layers": {
+    "common": {
+      "description": "Cross-client rules that always apply.",
+      "scope": [
+        "all-clients",
+        "all-domains",
+        "all-capabilities"
+      ],
+      "files": [
+        {
+          "path": "docs/standards/common/markdown-output-standards.md",
+          "purpose": "Markdown structure, clarity, and output formatting baseline"
+        },
+        {
+          "path": "docs/standards/common/prompt-writing-standards.md",
+          "purpose": "Prompt construction, response quality, and instruction hygiene"
+        },
+        {
+          "path": "docs/standards/common/security-baseline.md",
+          "purpose": "Cross-client security and privacy baseline"
+        },
+        {
+          "path": "docs/standards/common/capability-governance-baseline.md",
+          "purpose": "Cross-capability normative language, exception policy, and quality gate baseline"
+        }
+      ]
+    },
+    "domains": {
+      "description": "Workflow-specific standards that are independent of implementation stack.",
+      "entries": [
+        {
+          "id": "ba",
+          "description": "Business analysis outputs and transformations",
+          "files": [
+            "docs/standards/domains/ba/README.md"
+          ],
+          "appliesTo": [
+            "functional-requirements",
+            "gap-analysis",
+            "user-stories",
+            "reverse-engineer-analysis",
+            "ui-analysis"
+          ]
+        },
+        {
+          "id": "bpmn",
+          "description": "Workflow modeling and BPMN derivation",
+          "files": [
+            "docs/standards/domains/bpmn/cascade2_bpmn_standards.md"
+          ],
+          "appliesTo": [
+            "bpmn-analysis",
+            "bpmn-derivation",
+            "bpmn-generation",
+            "bpmn-review"
+          ]
+        },
+        {
+          "id": "qa",
+          "description": "Testing and validation-oriented outputs",
+          "files": [
+            "docs/standards/domains/qa/RULES.md"
+          ],
+          "appliesTo": [
+            "bug-report",
+            "automation-scripts",
+            "test-case-design",
+            "failure-triage"
+          ]
+        },
+        {
+          "id": "db",
+          "description": "Database design, SQL, and stored procedure outputs",
+          "files": [
+            "docs/standards/domains/db/db-schema-design-standards.md",
+            "docs/standards/domains/db/sp-coding-standards.md"
+          ],
+          "appliesTo": [
+            "schema-design",
+            "stored-procedures",
+            "data-dictionary",
+            "gap-analysis"
+          ]
+        }
+      ]
+    },
+    "capabilities": {
+      "description": "Reusable technical standards keyed by engineering capability rather than by a single client stack.",
+      "entries": [
+        {
+          "group": "language",
+          "items": [
+            {
+              "id": "csharp",
+              "files": [
+                "docs/standards/capabilities/language/csharp.md"
+              ],
+              "signals": [
+                ".cs",
+                ".csproj",
+                "c#",
+                "dotnet"
+              ]
+            },
+            {
+              "id": "java",
+              "files": [
+                "docs/standards/capabilities/language/java.md"
+              ],
+              "signals": [
+                ".java",
+                "pom.xml",
+                "gradle",
+                "spring boot"
+              ]
+            },
+            {
+              "id": "typescript",
+              "files": [
+                "docs/standards/capabilities/language/typescript.md"
+              ],
+              "signals": [
+                ".ts",
+                ".tsx",
+                "tsconfig",
+                "vite"
+              ]
+            },
+            {
+              "id": "sql",
+              "files": [
+                "docs/standards/capabilities/language/sql.md"
+              ],
+              "signals": [
+                ".sql",
+                "stored procedures",
+                "schema scripts"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "framework",
+          "items": [
+            {
+              "id": "react",
+              "files": [
+                "docs/standards/capabilities/framework/react.md"
+              ],
+              "signals": [
+                "react",
+                "tsx",
+                "jsx"
+              ]
+            },
+            {
+              "id": "angular",
+              "files": [
+                "docs/standards/capabilities/framework/angular.md"
+              ],
+              "signals": [
+                "angular",
+                "angular.json",
+                "@component",
+                "ngmodule"
+              ]
+            },
+            {
+              "id": "aspnet-core",
+              "files": [
+                "docs/standards/capabilities/framework/aspnet-core.md"
+              ],
+              "signals": [
+                "asp.net core",
+                "minimal api",
+                "controller"
+              ]
+            },
+            {
+              "id": "spring-boot",
+              "files": [
+                "docs/standards/capabilities/framework/spring-boot.md"
+              ],
+              "signals": [
+                "spring boot",
+                "springboot",
+                "@springbootapplication"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "testing",
+          "items": [
+            {
+              "id": "xunit",
+              "files": [
+                "docs/standards/capabilities/testing/xunit.md"
+              ],
+              "signals": [
+                "xunit",
+                ".net test"
+              ]
+            },
+            {
+              "id": "junit",
+              "files": [
+                "docs/standards/capabilities/testing/junit.md"
+              ],
+              "signals": [
+                "junit",
+                "assertj"
+              ]
+            },
+            {
+              "id": "vitest",
+              "files": [
+                "docs/standards/capabilities/testing/vitest.md"
+              ],
+              "signals": [
+                "vitest",
+                "vi.",
+                "describe("
+              ]
+            },
+            {
+              "id": "playwright",
+              "files": [
+                "docs/standards/capabilities/testing/playwright.md"
+              ],
+              "signals": [
+                "playwright",
+                "page.goto"
+              ]
+            },
+            {
+              "id": "testng",
+              "files": [
+                "docs/standards/capabilities/testing/testng.md"
+              ],
+              "signals": [
+                "testng",
+                "selenium"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "data",
+          "items": [
+            {
+              "id": "relational-schema",
+              "files": [
+                "docs/standards/capabilities/database/relational-schema.md"
+              ],
+              "signals": [
+                "tables",
+                "columns",
+                "indexes",
+                "normalization"
+              ]
+            },
+            {
+              "id": "stored-procedures",
+              "files": [
+                "docs/standards/capabilities/database/stored-procedures.md"
+              ],
+              "signals": [
+                "stored procedure",
+                "sproc",
+                "proc"
+              ]
+            },
+            {
+              "id": "data-contracts",
+              "files": [
+                "docs/standards/capabilities/database/data-contracts.md"
+              ],
+              "signals": [
+                "api contract",
+                "dto",
+                "payload"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "platform",
+          "items": [
+            {
+              "id": "azure",
+              "files": [
+                "docs/standards/capabilities/platform/azure.md"
+              ],
+              "signals": [
+                "azure",
+                "app service",
+                "function app"
+              ]
+            },
+            {
+              "id": "aws",
+              "files": [
+                "docs/standards/capabilities/platform/aws.md"
+              ],
+              "signals": [
+                "aws",
+                "lambda",
+                "ec2",
+                "s3"
+              ]
+            },
+            {
+              "id": "gcp",
+              "files": [
+                "docs/standards/capabilities/platform/gcp.md"
+              ],
+              "signals": [
+                "gcp",
+                "cloud run",
+                "gcs"
+              ]
+            },
+            {
+              "id": "onprem",
+              "files": [
+                "docs/standards/capabilities/platform/onprem.md"
+              ],
+              "signals": [
+                "on-prem",
+                "on premises",
+                "datacenter"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "architecture",
+          "items": [
+            {
+              "id": "api",
+              "files": [
+                "docs/standards/capabilities/architecture/api.md"
+              ],
+              "signals": [
+                "api",
+                "rest",
+                "endpoints"
+              ]
+            },
+            {
+              "id": "events",
+              "files": [
+                "docs/standards/capabilities/architecture/events.md"
+              ],
+              "signals": [
+                "event-driven",
+                "queue",
+                "messaging"
+              ]
+            },
+            {
+              "id": "workers",
+              "files": [
+                "docs/standards/capabilities/architecture/workers.md"
+              ],
+              "signals": [
+                "worker",
+                "background service",
+                "job"
+              ]
+            },
+            {
+              "id": "modular-boundaries",
+              "files": [
+                "docs/standards/capabilities/architecture/modular-boundaries.md"
+              ],
+              "signals": [
+                "module",
+                "boundary",
+                "separation of concerns"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "clients": {
+      "description": "Client overlays that narrow or extend the universal baseline.",
+      "entries": [
+        {
+          "id": "aircomm-carrier",
+          "profile": "config/client-profiles.json#clients.aircomm-carrier",
+          "overlayRoot": "docs/standards/clients/aircomm-carrier/overlays",
+          "description": "Single-client overlay profile for AirComm Carrier"
+        }
+      ]
+    }
+  },
+  "sourceStrategy": {
+    "interpretation": "If a rule exists in more than one layer, the resolver must prefer the most specific applicable layer while preserving common safety constraints.",
+    "traceRequired": true,
+    "clientDefault": "aircomm-carrier"
+  }
+}

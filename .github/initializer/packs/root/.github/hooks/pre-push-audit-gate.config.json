@@ -1,0 +1,8 @@
+{
+  "reportsDir": "reports/audits/full-codebase",
+  "maxAuditAgeHours": 24,
+  "reportPatterns": [
+    "AuditReport_*.md",
+    "QAAuditReport_*.md"
+  ]
+}

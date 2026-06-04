@@ -1,0 +1,6 @@
+{
+  "schema": "initializer-seed-manifest",
+  "version": "6.0",
+  "stage": "6",
+  "canonicalFile": ".github/initializer/manifest/seed-manifest.json"
+}

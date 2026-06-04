@@ -1,0 +1,101 @@
+{
+  "routingVersion": "1.0",
+  "description": "Model routing policy for token optimization. User manual selection in chat UI overrides all policies.",
+  "defaultModel": "claude-opus-4-1",
+  "autoRouting": {
+    "enabled": true,
+    "appliesTo": "automatic-prompt-execution-only",
+    "doesNotApplyTo": "manual-user-selection",
+    "complexityDetection": "keyword-based"
+  },
+  "taskCategories": {
+    "analysis": {
+      "model": "claude-opus-4-1",
+      "description": "Full codebase audits, complex assessments, multi-file reasoning",
+      "triggers": [
+        "audit",
+        "assessment",
+        "analyze",
+        "reverse-engineer",
+        "gap-analysis",
+        "full-codebase"
+      ]
+    },
+    "synthesis": {
+      "model": "claude-opus-4-1",
+      "description": "Code generation, architecture design, test generation",
+      "triggers": [
+        "generate",
+        "implement",
+        "create",
+        "design",
+        "build"
+      ]
+    },
+    "refactoring": {
+      "model": "claude-sonnet-4-20250514",
+      "description": "Single-file edits, refactoring, migration fixes",
+      "triggers": [
+        "refactor",
+        "migrate",
+        "fix",
+        "update",
+        "patch",
+        "single-file"
+      ]
+    },
+    "search-discovery": {
+      "model": "claude-haiku-3-5",
+      "description": "Codebase exploration, file searching, pattern matching",
+      "triggers": [
+        "search",
+        "find",
+        "locate",
+        "explore",
+        "discover"
+      ]
+    },
+    "validation": {
+      "model": "claude-haiku-3-5",
+      "description": "Quick checks, lint reviews, format validation",
+      "triggers": [
+        "validate",
+        "check",
+        "verify",
+        "lint"
+      ]
+    }
+  },
+  "complexitySignals": {
+    "highComplexity": [
+      "full codebase",
+      "all files",
+      "multi-layer",
+      "architecture",
+      "comprehensive"
+    ],
+    "mediumComplexity": [
+      "single file",
+      "specific method",
+      "targeted",
+      "isolated"
+    ],
+    "lowComplexity": [
+      "search",
+      "find",
+      "pattern",
+      "lookup",
+      "validation"
+    ]
+  },
+  "tokenBudgets": {
+    "description": "Recommended token budgets per task category (advisory, not enforced)",
+    "perCategory": {
+      "analysis": 150000,
+      "synthesis": 120000,
+      "refactoring": 80000,
+      "search-discovery": 30000,
+      "validation": 20000
+    }
+  }
+}

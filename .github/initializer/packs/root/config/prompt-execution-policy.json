@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "orchestration": {
+    "enabled": true,
+    "defaultMode": "safe-parallel",
+    "fallbackMode": "sequential",
+    "serialOnlyPrompts": [
+      "initialize-ai-workspace.prompt.md",
+      "reset-ai-workspace.prompt.md"
+    ],
+    "validation": {
+      "enabled": true,
+      "requireCompletenessCheck": true,
+      "requireCoherenceCheck": true,
+      "requireCorrectnessCheck": true
+    },
+    "overrides": {
+      "audit-fullcodebase.prompt.md": {
+        "enabled": true,
+        "mode": "safe-parallel"
+      },
+      "audit-uncommitted-changes.prompt.md": {
+        "enabled": true,
+        "mode": "safe-parallel"
+      },
+      "evaluate-output-quality.prompt.md": {
+        "enabled": false,
+        "mode": "sequential"
+      }
+    }
+  }
+}

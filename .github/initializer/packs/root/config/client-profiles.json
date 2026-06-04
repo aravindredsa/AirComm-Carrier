@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0",
+  "defaultClientId": "aircomm-carrier",
+  "clients": {
+    "aircomm-carrier": {
+      "displayName": "AirComm Carrier",
+      "description": "Single-client distribution profile for AirComm Carrier.",
+      "intendedUse": [
+        "feature-implementation",
+        "testing",
+        "documentation"
+      ],
+      "stackSignals": [
+        "java",
+        "typescript",
+        "react",
+        "spring-boot",
+        "junit",
+        "vitest",
+        "playwright",
+        "aws",
+        "gcp"
+      ],
+      "enabledCapabilities": {
+        "language": [
+          "java",
+          "typescript"
+        ],
+        "framework": [
+          "react",
+          "spring-boot"
+        ],
+        "testing": [
+          "junit",
+          "vitest",
+          "playwright"
+        ],
+        "data": [
+          "relational-schema",
+          "data-contracts"
+        ],
+        "platform": [
+          "aws",
+          "gcp"
+        ],
+        "architecture": [
+          "api",
+          "workers",
+          "modular-boundaries"
+        ]
+      },
+      "overlayPath": "docs/standards/clients/aircomm-carrier/overlays",
+      "baselineExpectations": [
+        "Use common standards first, then domain and capability standards, then this client overlay when needed.",
+        "Prefer output format: Markdown.",
+        "Output detail preference: very detailed.",
+        "Target output types: implementation plans, code changes, test cases, review comments.",
+        "Preferred terminology: use claimant instead of user.",
+        "Avoid terminology: avoid abbreviations in external reports."
+      ],
+      "requiredGuardrails": [
+        "Do not weaken common security or quality rules.",
+        "mask personal identifiers",
+        "no production data in examples",
+        "do not run destructive database operations without explicit approval",
+        "Approval gate: product owner approval and QA approval"
+      ]
+    }
+  },
+  "clientTemplate": {
+    "displayName": "<client-name>",
+    "description": "Profile for a downstream client.",
+    "intendedUse": [
+      "analysis",
+      "implementation",
+      "testing",
+      "documentation"
+    ],
+    "stackSignals": [],
+    "enabledCapabilities": {
+      "language": [],
+      "framework": [],
+      "testing": [],
+      "data": [],
+      "platform": [],
+      "architecture": []
+    },
+    "overlayPath": "docs/standards/clients/<client>/overlays",
+    "baselineExpectations": [],
+    "requiredGuardrails": []
+  }
+}

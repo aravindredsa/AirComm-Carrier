@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "2.0",
+  "defaultMode": "auto",
+  "supportedModes": [
+    "auto",
+    "bootstrap",
+    "migrate",
+    "reseed",
+    "audit"
+  ],
+  "stateFile": ".init_state/initializer-version.json",
+  "allowForceReseed": true,
+  "fallbackOnInvalidState": "bootstrap",
+  "deltaStrategy": "checksum-diff-with-missing-required-target-repair"
+}

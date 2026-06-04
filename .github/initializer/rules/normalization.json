@@ -1,0 +1,12 @@
+{
+  "pathRules": {
+    "separator": "/",
+    "allowAbsolutePaths": false,
+    "trimWhitespace": true
+  },
+  "contentRules": {
+    "lineEndings": "LF",
+    "trimTrailingSpaces": true,
+    "trimFinalTrailingNewlineForCompare": true
+  }
+}
