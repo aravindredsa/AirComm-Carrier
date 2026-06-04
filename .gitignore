@@ -1,0 +1,15 @@
+# Owner sync incoming artifacts
+.owner-sync-incoming/*
+!.owner-sync-incoming/README.md
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
